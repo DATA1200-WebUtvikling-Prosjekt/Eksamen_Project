@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for responsive-->
     <title>Home - Mathematical Modelling</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--for hamburger menu using-->
+    <link rel="stylesheet" href="styles.css"><!--for contact til Styles-->
 </head>
 <body>
 
-<header>
+<header> 
     <div class="header-logo">OsloMet</div>
     <h1>Mathematical Modelling</h1>
-    <nav>
+    <nav class="navbar"> <!--Navbar-->
         <!-- Checkbox for toggling the menu -->
         <input type="checkbox" id="kontrol">
         <!-- Label for hamburger icon -->
@@ -43,15 +43,34 @@
 
 <main class="grid-container">
     <aside class="side-menu">
-        <button class="side-link">Link 1</button>
-        <button class="side-link">Link 2</button>
-        <button class="side-link">Link 3</button>
+        <label for="panel1-toggle" class="side-link" aria-expanded="false">Link 1</label>
+        <label for="panel2-toggle" class="side-link" aria-expanded="false">Link 2</label>
+        <label for="panel3-toggle" class="side-link" aria-expanded="false">Link 3</label>
     </aside>
 
-    <section class="main-content">
+    <section class="main-content" id="main-content">
         <p>Main content area where you can add your content.</p>
-    </section>
 
+        <!-- Toggleable Panels with Checkboxes -->
+        <input type="checkbox" id="panel1-toggle" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel1">
+            <label for="panel1-toggle" class="close-btn"><i class="fa fa-times"></i></label>
+            <p>This is the information for Link 1.</p>
+        </div>
+
+        <input type="checkbox" id="panel2-toggle" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel2">
+            <label for="panel2-toggle" class="close-btn"><i class="fa fa-times"></i></label>
+            <p>This is the information for Link 2.</p>
+        </div>
+
+        <input type="checkbox" id="panel3-toggle" class="panel-toggle">
+        <div class="info-panel" aria-labelledby="panel3">
+            <label for="panel3-toggle" class="close-btn"><i class="fa fa-times"></i></label>
+            <p>This is the information for Link 3.</p>
+        </div>
+    </section>
+    
     <aside class="extra-info">
         <p>Additional information here.</p>
     </aside>
