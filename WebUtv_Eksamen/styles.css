@@ -19,11 +19,46 @@ body {
 header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1.5fr 3fr 1fr;
     align-items: center;
     padding: 1rem;
     background-color: #00093c;
     color: rgb(250, 250, 250);
+}
+
+/* Arama Kutusu */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.search-box {
+    padding: 0.4rem;
+    width: 150px;
+    border: 1px solid #2e3b86;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 0.4rem 0.6rem;
+    background-color: #2e3b86;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #1e1b7e;
+}
+
+/* Arama kutusunun mobil Görünümü */
+@media (max-width: 600px) {
+    .search-container {
+        display: none; 
+    }
 }
 
 /*Logo OsloMet*/
