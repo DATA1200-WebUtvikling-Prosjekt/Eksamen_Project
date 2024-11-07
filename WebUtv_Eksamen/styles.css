@@ -26,40 +26,36 @@ header {
     color: rgb(250, 250, 250);
 }
 
-/* Arama Kutusu */
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
+/* Search */
 
 .search-box {
-    padding: 0.4rem;
-    width: 150px;
-    border: 1px solid #2e3b86;
-    border-radius: 5px 0 0 5px;
-    font-size: 14px;
+height: px;
+display: flex;
+cursor: pointer;
+padding: 5px 15px;
+border-style: outset;
+border-color: #ddd;
+border-radius: 30px;
+align-items: center;
+box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-
-.search-button {
-    padding: 0.4rem 0.6rem;
-    background-color: #2e3b86;
-    color: white;
+.search-box:hover input {
+    width: 100%;
+}
+.search-box input {
+    width: 0;
+    outline: none;
     border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+    color: #ddd;
+}
+.search-box a .fas{
+    color:#ddd;
+    font-size:18px;
 }
 
-.search-button:hover {
-    background-color: #1e1b7e;
-}
-
-/* Arama kutusunun mobil Görünümü */
-@media (max-width: 600px) {
-    .search-container {
-        display: none; 
-    }
-}
 
 /*Logo OsloMet*/
 .header-logo {
