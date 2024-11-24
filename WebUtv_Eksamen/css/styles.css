@@ -29,7 +29,7 @@ body {
         "header"
         "content"
         "footer";
-    font-family: 'Arial, sans-serif', 'Trebuchet MS';
+    font-family: 'Tahoma';/*Sans-serif fonts are highly readable even on small screens*/
 }
 
 /* Navbar Design - Common for all pages */
@@ -1199,7 +1199,7 @@ https://www.w3schools.com/css/css3_images.asp
         cursor: pointer;
         font-weight: bold;
         background-color: #2b6fb7;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
  
 
@@ -1231,14 +1231,15 @@ https://www.w3schools.com/css/css3_images.asp
     /* "The sidebar starts hidden" */
     .menu {
         position: fixed;
-        right: -30%;
+        right: -100%;/*comes from right*/
         top: 0;
-        height: 13%;
-        width: 9rem;
+        height: 35vh;
+        width: 40%;
         background-color: #000064;
         transition: right 0.5s ease;
         z-index: 15;
         padding-top: 3.5rem;
+        max-width: 100%;
     }
 
     /*vertical menu*/
@@ -1247,7 +1248,7 @@ https://www.w3schools.com/css/css3_images.asp
         flex-direction: column;
         padding: 0;
         margin: 0;
-        right: 3.5rem;
+        right: 1rem;
     }
 
     .menu ul li {
@@ -1262,6 +1263,8 @@ https://www.w3schools.com/css/css3_images.asp
 
     .menu a.active {
         font-size: 1.1rem;
+        border-bottom: none;
+        
     }
 
     /* "Show from the right when the menu is opened" */
@@ -1275,14 +1278,14 @@ https://www.w3schools.com/css/css3_images.asp
     }
 
     .kontrol .fa-times {
-        display: none;
-        /* "X is initially hidden"*/
+        display: none;/* "X is initially hidden"*/
+        
     }
 
     /* "The icon changes when the hamburger menu is opened" */
     #kontrol:checked+.kontrol .fa-bars {
-        display: none;
-        /* "The three lines are hidden" */
+        display: none;/* "The three lines are hidden" */
+        
     }
 
     #kontrol:checked+.kontrol .fa-times {
@@ -1302,21 +1305,43 @@ https://www.w3schools.com/css/css3_images.asp
 
     /*Homepage video*/
     .video {
-        width: 100%;
-        /* Full width of its container */
+        width: 90%;
         height: 20rem;
         margin-top: 0rem;
+        max-width: 90%;
     }
+
+    .video.video-preview{
+        max-width: 90%;
+    }
+
+    .video-preview img{
+        max-width: 90%;
+    }
+
+    .grid-container-home {
+       
+        grid-template-columns: 22% 70%;/* Defines the side menu and main content width */
+        grid-template-rows: auto auto;
+        gap: 0.2rem;
+        padding: 0.4rem;
+        
+    }
+
+    .accordion{
+        max-width: 80%;
+    }
+
+
 
     /* Mobile side-link layout */
     .side-link {
         position: relative;
-        /* Reference for positioning the info-panel */
         font-size: 1rem;
-        z-index: 5;
-        /* The side-link is positioned behind the panel. */
+        z-index: 5;/* The side-link is positioned behind the panel. */ 
         padding: 0.2rem;
-        margin-bottom: 0.15rem;
+        margin-bottom: 0.1rem;
+        max-width: 100%;
     }
 
     /*Studie table radio buttons*/
@@ -1331,6 +1356,11 @@ https://www.w3schools.com/css/css3_images.asp
     font-weight: bold;
     background-color: #2b6fb7;
     font-size: 0.9rem;
+    }
+
+    .main-content-home {
+        position: relative; /* "Provides a reference for the info-panel" */
+        z-index: 1; /* "Remains below the panel" */
     }
 
     /*activity mobil*/
@@ -1423,14 +1453,8 @@ https://www.w3schools.com/css/css3_images.asp
         
    
 
-    
-    
-
-
-
        /*css for mobile accesibility page*/
        
-
 
        .accesibility-page h1{
         font-size: 2rem;
@@ -1516,7 +1540,7 @@ https://www.w3schools.com/css/css3_images.asp
     }
     .video{
         width: 100%; /* Full width of its container */
-        height: 20rem;
+        height: 25rem;
         margin-top: 0rem;
     }
 
@@ -1525,35 +1549,6 @@ https://www.w3schools.com/css/css3_images.asp
         margin-left:0;
         margin-right:0;
     }
-    
-
-    /* "Grid layout adjustment on mobile" */
-    .grid-container-home {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "side-menu"
-            "main-content"
-            "accordion";
-    }
-
-    .side-menu {
-        grid-area: side-menu;
-        display: flex;
-        flex-direction: column; /* "To align menu items horizontally" */
-        justify-content: flex-start; /* "To align the items by centering them" */
-        gap: 0.1rem; /* "Spacing between menu items" */
-        background-color: #ddd; /* "Background color for visual distinction" */
-        z-index: 5;
-        padding: 0.1rem; /* "Narrower padding for the horizontal menu" */
-    }
-
-
-    .main-content-home {
-        position: relative; /* "Provides a reference for the info-panel" */
-        z-index: 1; /* "Remains below the panel" */
-    }
-
 
    
 }
