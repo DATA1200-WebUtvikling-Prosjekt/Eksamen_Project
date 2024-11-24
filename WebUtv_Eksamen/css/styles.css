@@ -668,7 +668,7 @@ footer {
     bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: white;
-    padding: 10px 0;
+    padding: 0.6rem 0;
     font-size: 13px;
     line-height: 20px;
 }
@@ -689,16 +689,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2px;
+    padding: 0.12rem;
     flex: 1;
     max-width: 300px;
 }
 
 .column p {
-    font-size: 1.2rem;
-    /* "Increase the font size" */
-    line-height: 1.4;
-    /* "Adjust the line spacing" */
+    font-size: 1.2rem; /* "Increase the font size" */
+    line-height: 1.4rem; /* "Adjust the line spacing" */
 }
 
 .column p a {
@@ -708,46 +706,42 @@ footer {
 
 .column h3 {
     color: white;
-    font-size: x-large;
-    margin-top: 5px;
-    font-weight: bold;
-    white-space: nowrap;
-    padding: 2rem;
-    margin-bottom: 0;
-
+   font-size: x-large;
+   margin-top:0.3rem ;
+   font-weight: bold;
+  white-space: nowrap;
+   padding: 2rem;/*makes space above the text*/
+   margin-bottom: 0;
+   
 }
-
+/*contact us section css*/
 .contact-link {
     display: block;
     /* "Move the link to a new line" */
     font-weight: bold;
     font-size: 1rem;
-    text-decoration: none;
     color: white;
-    margin-top: 60px;
-    /* "Adds some spacing from the top" */
+    margin-top: 3rem; /* "Adds some spacing from the top" */
     text-decoration: underline;
 }
+    .contact-link:hover{
+        text-decoration: underline;/*text is shown underline shinnier when mouse is on it as well*/
+    }
 
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-ul li {
-    list-style: none;
+    /*footer side LINKS section*/
+ul li{
+    list-style: none;/*it removes the bullet dots (listing dot) on the left side the links*/
     margin-bottom: 12px;
 }
-
-ul li a {
-    text-decoration: underline;
+ul li a{
+    text-decoration:underline ;/*text is underline to get attention*/
     color: white;
 
 }
-
-
-.column i {
+/*website adress and name section*/
+.column i{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     text-align: left;
     font-size: 2rem;
     /*to make the social media icons bigger*/
@@ -756,10 +750,10 @@ ul li a {
 .column a {
     color: white;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     display: block;
     transition: transform 0.3s ease;
-    padding: 5px 10px;
+    padding: 0.3rem 0.6rem;
 }
 
 .column a:hover,
@@ -771,9 +765,9 @@ ul li a {
 
 /* "2x2 grid settings for social media icons" */
 .social-media-grid {
-    padding: 4rem;
+    padding: 6rem;/*used for holding them aligned the icons in the middle*/
     display: grid;
-    gap: 10px;
+    gap: 0.6rem;/*leaves space between them*/
     text-align: center;
     width: 100%;
 
@@ -786,9 +780,9 @@ ul li a {
     text-decoration: underline;
     /*underlines the names of the links*/
     display: flex;
-    align-items: center;
+    align-items: center;/*keeps the cons and the text aligned*/
     justify-content: center;
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 .social-media-grid a:hover {
@@ -796,12 +790,12 @@ ul li a {
 }
 
 .social-media-grid i {
-    margin-right: 8px;
-    font-size: 1.8rem;
-    /* "Icon size" */
+    margin-right: 0.5rem;
+    font-size: 1.8rem; /* "Icon size" */
 }
 
 /* -------------------------"Footer codes end here. -------------------------------------------."*/
+
 
 
 /*---------------------------------Activity Page Design STARTS-----------------------------------*/
@@ -815,21 +809,15 @@ ul li a {
 
 /*styling codes for rhe background container*/
 .background-container {
-    max-width: 1200%;
-    /*  streches the width of the backgound container completely*/
-    gap: 2rem;
-    padding: 20px;
-    /*"Add padding between the content and the edges." */
-    background-color: #b3e5fc;
-    /*makes background light blue color*/
-    border-radius: 10px;
-    /* round the corners*/
-    box-sizing: border-box;
-    /* used to prevent overflow*/
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* added a bit shadow */
-    margin: 2.5rem;
-
+     max-width: 1200%; /*  streches the width of the backgound container completely*/
+     gap: 2rem;
+     padding: 1.25rem; /*"Add padding between the content and the edges." */
+     background-color: #b3e5fc; /*makes background light blue color*/
+     border-radius: 0.6rem; /* round the corners*/
+     box-sizing: border-box; /* used to prevent overflow*/
+     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* added a bit shadow */
+     margin: 2.5rem;
+     
 }
 
 /*the head title*/
@@ -862,16 +850,11 @@ ul li a {
 
 /*image container styling */
 .image-container {
-    display: grid;
-    /* used to make elements 2 column grid container */
-    grid-template-columns: 1fr 1fr;
-    /*kepp the images in the same grid container*/
-    object-fit: contain;
-    /*used to fit the images entirely in the container*/
-    gap: 20px;
-    /* leaves space between images*/
-    justify-content: center;
-    /* keeps the images (grid container) in the center */
+    display: grid; /* used to make elements 2 column grid container */
+    grid-template-columns: 1fr 1fr;/*kepp the images in the same grid container*/
+    object-fit: contain;/*used to fit the images entirely in the container*/
+    gap: 1.25rem; /* leaves space between images*/
+    justify-content: center; /* keeps the images (grid container) in the center */
 }
 
 .image-figure-intro img {
@@ -923,7 +906,7 @@ ul li a {
     gap: 4.5rem;
     background-color: #ffffff;
     border: 1px solid #292727;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -952,9 +935,9 @@ ul li a {
     text-align: center;
     /*aligns the items in the center*/
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-
-}
+    border-radius: 0.25rem;
+  
+  }
 
 /* sub-headings */
 .grid-item-activity h3 {
@@ -1051,11 +1034,9 @@ ul li a {
 
 }
 
-.accesibility-page-images {
-    display: grid;
-    /* "Use flexbox to arrange side by side" */
-    grid-template-columns: 1fr 1fr;
-    /*gereksiz olabilir bu kod geri don BAKKKKKKK*/
+.accesibility-page-images{
+    display: grid; /* "Use flexbox to arrange side by side" */
+    grid-template-columns: 1fr 1fr; 
     padding: 3rem;
     gap: 4rem;
     /* "Spacing between images" */
@@ -1123,12 +1104,11 @@ ul li a {
 .accesibility-testing article {
     background-color: #a1d6fa;
     padding: 0.5rem;
-    border-radius: 5px;
-
-
-}
-
-.accesibility-testing article p {
+    border-radius: 0.3rem;
+   
+    
+  }
+  .accesibility-testing article p{
     font-size: 1.1rem;
     padding: 0.6rem;
 
@@ -1136,8 +1116,6 @@ ul li a {
 
 /* -----------------accesibility design finished here-------------*/
 
-
-/*Github page*/
 
 
 
@@ -1212,10 +1190,72 @@ https://www.w3schools.com/css/css3_images.asp
 
 
 /*###################################################################*/
-/*CSS SETTINGS FOR TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+/*css settings for mobile OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
 @media (max-width: 480px) {
 
     /*HOMEPAGE-CSS*/
+    
+        /* "Info-panels in mobile view" */
+        .info-panel {
+            position: absolute; /* "Positioned relative to the parent element" */
+            top: 0; /* "Aligned from the top relative to the side-link" */
+            left: 0; /* "Aligned from the left relative to the side-link" */
+            z-index: 10; /* "A high value is assigned for it to appear on top" */
+            width: 100%; /* "Full width on mobile" */
+            max-width: none; /* "The width limit is removed" */
+            visibility: hidden; /* "Hidden by default" */
+            max-height: 0; /* "The height is zero when closed" */
+            transition: all 0.5s ease-out; /* "Smooth transition" */
+            margin: 0; /* "The spacing between panels is removed" */
+            overflow: hidden; /* Content overflow is prevented */
+            background-color: #f8f8f8; /* The background of the panel */
+            padding: 1rem; /* Padding for the panel content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
+        }
+    
+        /* When the panel appearance is triggered */
+        .panel-toggle:checked + .info-panel {
+            visibility: visible;
+            max-height: 300px; /* Maximum height when open */
+            overflow: auto; /* Long content becomes scrollable */
+        }
+    
+        /* Mobile side-link layout */
+        .side-link {
+            position: relative; /* Reference for positioning the info-panel */
+            font-size: 1rem;
+            z-index: 5; /* The side-link is positioned behind the panel. */
+            padding: 0.2rem;
+            margin-bottom: 0.15rem;
+        }
+    
+    
+        /* Close button layout */
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.2rem;
+            color: #000;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    
+        /*Studie table radio buttons*/
+        .label-matematik,
+        .label-statistik,
+        .label-vitenskapelige {
+        padding: 0.2rem 0.2rem;
+        color: white;
+        margin-right: 0.1rem;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #2b6fb7;
+        font-size: 0.9rem;
+    }
+ 
 
     .search-box {
         justify-self: left;
@@ -1337,341 +1377,220 @@ https://www.w3schools.com/css/css3_images.asp
     .label-matematik,
     .label-statistik,
     .label-vitenskapelige {
-        padding: 0.2rem 0.2rem;
-        color: white;
-        margin-right: 0.1rem;
-        border-radius: 0.1rem;
-        cursor: pointer;
-        font-weight: bold;
-        background-color: #2b6fb7;
-        font-size: 0.9rem;
+    padding: 0.2rem 0.2rem;
+    color: white;
+    margin-right: 0.1rem;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #2b6fb7;
+    font-size: 0.9rem;
     }
 
-    /*GitHub page-CSS for mobile*/
-    .GitHubPageImages {
-        grid-template-columns: 1fr; /* Display one image per row */
+    /*activity mobil*/
+       /*In the activity page, the grid item activity is set to a single column.*/
+       .grid-container-activity {
+        grid-template-columns: 1fr; /* Switch to a single column. */
+        gap: 2rem; /* The space between the boxes. */
+       
     }
+   .grid-item-activity{
+    line-height: 1rem;
+   }
+    
 
-    .GitHubPageTextContent {
-        font-size: 0.9rem; /* Reduce text size for smaller screens */
-        padding: 1rem; /* Adjust padding */
+    .grid-item-activity figure {
+        width: 100%; /* Image container width */
+        margin-bottom: 1rem; /* The space between the text and the image. */
     }
-
-    .GitHubPageimage {
-        border-radius: 0.5rem; /* Reduce border radius for smaller images */
+    
+    .grid-item-activity img {
+        width: 90%; /* Make the image smaller and center it. */
+        height: auto; /* Resize while keeping the aspect ratio. */
     }
-
-}
-    /*###################################################################*/
-    /*CSS SETTINGS FOR TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
-    @media (min-width:480px) and (max-width: 768px) {
-
-        /*HOMEPAGE-CSS*/
-        /*Header h1*/
-        .page-header1 {
-            font-size: 1.8rem;
-        }
-
-        /*Header h2*/
-        .page-header2 {
-            font-size: 1.5rem;
-
-        }
-
-        .video {
-            width: 100%;
-            /* Full width of its container */
-            height: 20rem;
-            margin-top: 0rem;
-        }
-
-        .search-box {
-            justify-self: left;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-
-        /* "Grid layout adjustment on mobile" */
-        .grid-container-home {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto;
-            grid-template-areas:
-                "side-menu"
-                "main-content"
-                "accordion";
-        }
-
-        .side-menu {
-            grid-area: side-menu;
-            display: flex;
-            flex-direction: column;
-            /* "To align menu items horizontally" */
-            justify-content: flex-start;
-            /* "To align the items by centering them" */
-            gap: 0.1rem;
-            /* "Spacing between menu items" */
-            background-color: #ddd;
-            /* "Background color for visual distinction" */
-            z-index: 5;
-            padding: 0.1rem;
-            /* "Narrower padding for the horizontal menu" */
-        }
-
-
-        .main-content-home {
-            position: relative;
-            /* "Provides a reference for the info-panel" */
-            z-index: 1;
-            /* "Remains below the panel" */
-        }
-
-
-        /* "Info-panels in mobile view" */
-        .info-panel {
-            position: absolute;
-            /* "Positioned relative to the parent element" */
-            top: 0;
-            /* "Aligned from the top relative to the side-link" */
-            left: 0;
-            /* "Aligned from the left relative to the side-link" */
-            z-index: 10;
-            /* "A high value is assigned for it to appear on top" */
-            width: 100%;
-            /* "Full width on mobile" */
-            max-width: none;
-            /* "The width limit is removed" */
-            visibility: hidden;
-            /* "Hidden by default" */
-            max-height: 0;
-            /* "The height is zero when closed" */
-            transition: all 0.5s ease-out;
-            /* "Smooth transition" */
-            margin: 0;
-            /* "The spacing between panels is removed" */
-            overflow: hidden;
-            /* Content overflow is prevented */
-            background-color: #f8f8f8;
-            /* The background of the panel */
-            padding: 1rem;
-            /* Padding for the panel content */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            /* Clarity with shading */
-        }
-
-        /* When the panel appearance is triggered */
-        .panel-toggle:checked+.info-panel {
-            visibility: visible;
-            max-height: 300px;
-            /* Maximum height when open */
-            overflow: auto;
-            /* Long content becomes scrollable */
-        }
-
-        /* Mobile side-link layout */
-        .side-link {
-            position: relative;
-            /* Reference for positioning the info-panel */
-            font-size: 1rem;
-            z-index: 5;
-            /* The side-link is positioned behind the panel. */
-            padding: 0.2rem;
-            margin-bottom: 0.15rem;
-        }
-
-
-        /* Close button layout */
-        .close-btn {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-            font-size: 1.2rem;
-            color: #000;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /*Studie table radio buttons*/
-        .label-matematik,
-        .label-statistik,
-        .label-vitenskapelige {
-            padding: 0.2rem 0.2rem;
-            color: white;
-            margin-right: 0.1rem;
-            border-radius: 0.1rem;
-            cursor: pointer;
-            font-weight: bold;
-            background-color: #2b6fb7;
-            font-size: 0.9rem;
-        }
-
-        /*In the activity page, the grid item activity is set to a single column.*/
-        .grid-container-activity {
-            grid-template-columns: 1fr;
-            /* Switch to a single column. */
-            gap: 2rem;
-            /* The space between the boxes. */
-        }
-
-        .grid-item-activity {
-            display: flex;
-            flex-direction: column;
-            /* Align the content vertically. */
-            align-items: center;
-            /* Center the content. */
-            text-align: center;
-            /*Center the text. */
-        }
-
-        .grid-item-activity figure {
-            width: 100%;
-            /* Image container width */
-            margin-bottom: 1rem;
-            /* The space between the text and the image. */
-        }
-
-        .grid-item-activity img {
-            width: 90%;
-            /* Make the image smaller and center it. */
-            height: auto;
-            /* Resize while keeping the aspect ratio. */
-        }
-
-        .grid-item-activity article {
-            width: 100%;
-            /* Adjust the article width. */
-        }
-
-
-        /*-------------------Activity page tablet codes------------------*/
-        h1.introduksjontittel {
-            font-size: 1.8rem;
-            /* Smaller size for small screens */
-            text-align: center;
-            /* Center the text */
-            line-height: 1.4;
-            /* Add space between lines */
-        }
-
-        .image-container {
-            grid-template-columns: 1fr;
-
-        }
-
-        .image-figure-intro img {
-            width: 100%;
-            /* "The image fits the box at full width" */
-            height: auto;
-            /* "The height is adjusted while maintaining its aspect ratio" */
-            object-fit: contain;
-            /* "Fits the entire image into the box" */
-            display: block;
-            /* "Removes the padding around the image" */
-            margin: 0 auto;
-            /* "Centers" */
-        }
-
-        .image-figure-intro figcaption {
-            align-items: start;
-            width: 100%;
-            word-wrap: break-word;
-        }
-
-        .grid-container-activity {
-            grid-template-columns: 1fr;
-            /* "Single-column layout" */
-            gap: 2rem;
-            /* "Spacing between boxes" */
-
-        }
-
-        .grid-item-activity {
-            display: grid;
-            grid-template-columns: 1fr;
-            align-items: center;
-            /* "Centers the content" */
-            text-align: start;
-            /* "Centers the text" */
-
-
-        }
-
-        .grid-item-activity figure {
-            display: flex;
-            flex-direction: column;
-            /*"Stack the image and the description on top of each other" */
-            align-items: center;
-            /* "Center the image and the description horizontally" */
-            justify-content: center;
-            /* "Center the image and the description vertically" */
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .grid-item-activity img {
-            width: 100%;
-            /* "Fit the image into the box" */
-            height: auto;
-            /* "Maintain the aspect ratio" */
-            object-fit: contain;
-            /* "Display the entire image" */
-        }
-
-        .grid-item-activity figcaption {
-            margin-top: 0.5rem;
-            /* "Add spacing between the image and the caption" */
-            font-size: 1rem;
-            /* "Reduce the caption font size on small screens" */
-            color: #555;
-            /* "Set the caption color" */
-        }
-
-        .accesibility-testing {
-            grid-template-columns: 1fr;
-            /* "Switch to a single column" */
-            gap: 1rem;
-            /* "Reduce the spacing between the boxes" */
-            margin: 1rem;
-            /* "Reduce the outer margin" */
-        }
-
-        /*---------------activity page Tablet codes are finished here-------------*/
-
+    
+    .grid-item-activity article {
+        width: 100%; /* Adjust the article width. */
+    }
+    
+    
         /*----------GitHub mobil css---------------*/
-
-
-        .GitHubPageImages {
-            grid-template-columns: repeat(2, 1fr); /* Display two images per row */
-            gap: 0.5rem; /* Reduce gap between images */
+    
+        
+        .GitHubPageTextContent {
+            text-align: center;
+            padding: 1rem;
         }
     
-        .GitHubPageTextContent {
-            font-size: 1rem; /* Keep a slightly larger font size for better readability */
+        .GitHubPageTextContent h3 {
+            font-size: 1.3rem;
         }
-
-
-        /*-----------Accessibility page mobil css ------------*/
-
-        .accesibility-page h1 {
-            font-size: 2rem;
+    
+        .GitHubPageTextContent p {
+            font-size: 0.9rem;
         }
-
-        .accesibility-page p {
-            font-size: 1.5rem;
-        }
-
-        .accesibility-testing {
+    
+        .GitHubPageImages {
             grid-template-columns: 1fr;
-            /*columns reduced to one for better readibility*/
-
         }
+        
+    
+    /*-------------------Activity page mobile codes------------------*/
+    h1.introduksjontittel {
+        font-size: 1.2rem; /* Smaller size for small screens */
+       margin: 1rem;
+    }
+    .image-container {
+        grid-template-columns: 1fr;  
+    
+      
+    }
+    .aktivitetsoversikt p{
+        font-size:1rem;
+    }
+   
+    .image-figure-intro figcaption {
+       font-size: 0.7rem;
+    }
+    .grid-item-activity h3{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 
-        .accesibility-testing article h2 {
-            font-size: 1.2rem;
-        }
+    
+    
+
+/*---------------activity page Tablet codes are finished here-------------*/
+
+       /*css for mobile accesibility page*/
+       
+
+
+       .accesibility-page h1{
+        font-size: 2rem;
 
     }
+    .accesibility-page p{
+        font-size:1.5rem;
+        padding-left: 0rem; /*gives space between the website frame and the text*/
+        padding-right:0; /*gives space between the website frame and the text*/
+    
+        line-height: 2rem;
+    
+        
+    
+    }
+    .accesibility-page-images{
+        grid-template-columns: 1fr;
+       padding-left: 0rem;/*used for reducing space to get images and figcation in the center of the oage*/
+        
+    }
+    .accesibility-page-images{
+        width: 120%;
+    }
+    .accesibility-testing{
+        grid-template-columns: 1fr;
+        width: 100%;/*blue textes is fittet to the mobile screen*/
+       margin-left: 0.3rem;
+
+    }
+    .accesibility-testing article{
+        font-size: 1rem;
+       
+    }
+    .accesibility-testing p{
+        line-height: 2rem;
+       
+    }
+
+
+    /*mobile settings footer*/
+    footer {
+        .column h3{
+            font-size: 1rem;
+        }
+        .column{
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+
+
+
+    /*GitHub page-CSS for mobile*/
+    .GitHubPageMain {
+        padding: 1rem;
+    }
+
+    .GitHubPageImages {
+        gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+      
+    }
+  
+    
+}
+
+
+
+/*###################################################################*/
+/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+@media (min-width:480px) and (max-width: 768px) {
+    /*HOMEPAGE-CSS*/
+    /*Header h1*/
+    .page-header1{
+        font-size: 1.8rem;
+    }
+
+    /*Header h2*/
+    .page-header2{
+        font-size: 1.5rem;
+
+    }
+    .video{
+        width: 100%; /* Full width of its container */
+        height: 20rem;
+        margin-top: 0rem;
+    }
+
+    .search-box {
+        justify-self: left;
+        margin-left:0;
+        margin-right:0;
+    }
+    
+
+    /* "Grid layout adjustment on mobile" */
+    .grid-container-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "side-menu"
+            "main-content"
+            "accordion";
+    }
+
+    .side-menu {
+        grid-area: side-menu;
+        display: flex;
+        flex-direction: column; /* "To align menu items horizontally" */
+        justify-content: flex-start; /* "To align the items by centering them" */
+        gap: 0.1rem; /* "Spacing between menu items" */
+        background-color: #ddd; /* "Background color for visual distinction" */
+        z-index: 5;
+        padding: 0.1rem; /* "Narrower padding for the horizontal menu" */
+    }
+
+
+    .main-content-home {
+        position: relative; /* "Provides a reference for the info-panel" */
+        z-index: 1; /* "Remains below the panel" */
+    }
+
+
+   
+}
 
 
 
