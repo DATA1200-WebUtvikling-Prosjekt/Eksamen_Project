@@ -14,7 +14,8 @@
 /* "General Style Settings" */
 
 * {
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
 }
 
 body {
@@ -22,12 +23,13 @@ body {
     padding: 0;
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, content, and footer layout */
+    grid-template-rows: auto 1fr auto;
+    /* Header, content, and footer layout */
     grid-template-areas:
         "header"
         "content"
         "footer";
-    font-family: 'Arial, sans-serif','Trebuchet MS';
+    font-family: 'Arial, sans-serif', 'Trebuchet MS';
 }
 
 /* Navbar Design - Common for all pages */
@@ -35,82 +37,118 @@ body {
 header {
     grid-area: header;
     display: grid;
-    align-items: center;/* Vertically aligns the header content */
-    padding:0 1rem; /* Horizontal padding */
+    align-items: center;
+    /* Vertically aligns the header content */
+    padding: 0 1rem;
+    /* Horizontal padding */
     background-color: #000064;
     color: rgb(250, 250, 250);
-    
+
 }
 
 /*Oslomet Logo Styling */
+/* The logo was taken from oslomet facebook nettside */
 .header-logo {
-    height: 6.25rem; 
-    width: auto; 
-    margin-left: 1rem; 
+    height: 6.25rem;
+    width: auto;
+    margin-left: 1rem;
 }
 
 /*Search Box*/
 /* Design inspired by https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan*/
 .search-box {
     display: flex;
-    /* Changes the cursor to a pointer (hand icon) to indicate the item is clickable */
+    /* Aligns the items inside the search box in a horizontal layout */
     cursor: pointer;
+    /* Changes the cursor to a pointer (hand icon) to indicate the item is clickable */
     align-items: center;
-    margin-left: auto; /* Pushes the search box to the right */
-    margin-right: 2rem; /* Spacing from the edge */
-    justify-self: right; 
+    /* Vertically centers the items inside the search box */
+    margin-left: auto;
+    /* Pushes the search box to the right by using automatic left margin */
+    margin-right: 2rem;
+    /* Adds spacing of 2rem from the right edge */
+    justify-self: right;
+    /* Aligns the search box to the right within its container */
     padding: 0.3rem 0.9rem;
+    /* Adds inner spacing: 0.3rem vertically, 0.9rem horizontally */
     border: 0.125rem solid #ddd;
+    /* Adds a solid border with a light gray color */
     border-radius: 1.8rem;
+    /* Rounds the corners of the search box */
     box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.3);
-    }
+    /* Adds a shadow for a subtle 3D effect */
+}
+
 /*Input space css*/
-    .search-box:hover input {
-        width: 100%;
-        
-    }
-    .search-box input {
-        width: 0;
-        outline: none;/* Removes focus outline */
-        border: none;
-        font-weight: 500;/* Medium font weight */
-        transition: 0.8s;
-        background: transparent;
-        color: #ddd;
-    }
-    
-    /*button and icon*/
-    .search-box button {
-        background: none; /* "Background is removed" */
-        border: none; /* "Frame is removed" */
-        padding: 0; /* "Spacing is removed" */
-        cursor: pointer; /* "Clickable pointer" */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff; 
-        font-size: 24px; 
-        transition: color 0.3s ease;
-        margin-left: 10px;
-    }
-    
-    .search-box button:hover {
-        color: #ffffff; /* "Color change on hover effect" */
-    }
-    
+.search-box:hover input {
+    width: 100%;
+    /* Expands the input field to full width when the search box is hovered */
+}
+
+.search-box input {
+    width: 0;
+    /* Initially sets the input field width to zero (hidden) */
+    outline: none;
+    /* Removes the default focus outline around the input field */
+    border: none;
+    /* Removes the border of the input field */
+    font-weight: 500;
+    /* Sets a medium font weight for the text inside the input */
+    transition: 0.8s;
+    /* Smoothly transitions the width over 0.8 seconds */
+    background: transparent;
+    /* Makes the input field background transparent */
+    color: #ddd;
+    /* Sets the text color to a light gray */
+}
+
+/* Button and icon inside the search box */
+.search-box button {
+    background: none;
+    /* Removes the default background of the button */
+    border: none;
+    /* Removes the default border of the button */
+    padding: 0;
+    /* Removes any default padding */
+    cursor: pointer;
+    /* Changes the cursor to indicate the button is clickable */
+    display: flex;
+    /* Aligns the button content in a flexible container */
+    align-items: center;
+    /* Vertically centers the button content */
+    justify-content: center;
+    /* Horizontally centers the button content */
+    color: #ffffff;
+    /* Sets the default color of the button icon to white */
+    font-size: 24px;
+    /* Sets the font size for the button icon */
+    transition: color 0.3s ease;
+    /* Smoothly transitions the color over 0.3 seconds */
+    margin-left: 10px;
+    /* Adds spacing between the button and the input field */
+}
+
+.search-box button:hover {
+    color: #ffffff;
+    /* Ensures the button icon remains white on hover */
+}
 
 /* Navbar Menu Section*/
-.navbar{
+.navbar {
     display: grid;
-    grid-template-columns: auto 1fr auto;/* Logo, menu, and search box layout */
-    align-items: center;/* Vertically aligns navbar content */
+    grid-template-columns: auto 1fr auto;
+    /* Logo, menu, and search box layout */
+    align-items: center;
+    /* Vertically aligns navbar content */
 }
 
 /* Menu Styling */
 .menu {
     display: flex;
-    gap: 1rem; /* Spacing between menu items */
-    justify-self: end; /* Aligns the menu to the right */
+    gap: 1rem;
+    /* Spacing between menu items */
+    justify-self: end;
+    /* Aligns the menu to the right */
 }
 
 /* Horizontal Menu Styles for Large Screens */
@@ -118,24 +156,28 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
-    list-style: none; /* Removes bullet points */
-    
+    list-style: none;
+    /* Removes bullet points */
+
 }
 
 /* Menu Links Formatting*/
 .menu a {
     color: white;
-    text-decoration: none; /* Removes underline when not on*/
+    text-decoration: none;
+    /* Removes underline when not on*/
     font-size: 1.3rem;
-    padding: 0.5rem 0.8rem; /* Padding around the link */
+    padding: 0.5rem 0.8rem;
+    /* Padding around the link */
     background-color: #000064;
     font-weight: bold;
-    position: relative; /* Enables additional styling, like hover effects */
+    position: relative;
+    /* Enables additional styling, like hover effects */
 }
 
 /*menu active style. User understand that which page is open*/
 .menu a.active {
-    color: rgb(255, 255, 255);  
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border-bottom: 2px solid rgb(255, 255, 255);
     font-size: 150%;
@@ -151,23 +193,28 @@ Inspired by the following tutorial:
 
 /* Main Content Layout */
 .grid-container-home {
-    grid-area: content; /* Assigns this grid container to the content area */
+    grid-area: content;
+    /* Assigns this grid container to the content area */
     display: grid;
-    grid-template-columns: 18% 82%;/* Defines the side menu and main content width */
-    grid-template-rows: auto auto; /* new row for the accordion */
-    grid-template-areas: 
+    grid-template-columns: 18% 82%;
+    /* Defines the side menu and main content width */
+    grid-template-rows: auto auto;
+    /* new row for the accordion */
+    grid-template-areas:
         "side-menu main-content"
-        "accordion accordion"; /* accordion takes full width at the second row */
+        "accordion accordion";
+    /* accordion takes full width at the second row */
     gap: 0.6rem;
     padding: 1.2rem;
-    height: auto;/* Sets the height based on viewport with a specific offset */
+    height: auto;
+    /* Sets the height based on viewport with a specific offset */
 }
 
 /* The home page main-content */
 .main-content-home {
     grid-area: main-content;
-    grid-column: 2; 
-    grid-row: 1; 
+    grid-column: 2;
+    grid-row: 1;
     background-color: #e9e9e9;
     padding: 1.2rem;
     font-size: 1.1rem;
@@ -176,18 +223,20 @@ Inspired by the following tutorial:
 }
 
 /*Homepage title*/
-.page-header{
+.page-header {
     justify-content: center;
 }
+
 /*HPT1*/
-.page-header1{
+.page-header1 {
     display: flex;
     font-size: 40px;
     color: #222;
     margin-left: 1rem;
 }
+
 /*HPT2*/
-.page-header2{
+.page-header2 {
     font-size: 28px;
     color: #222;
     margin-left: 1rem;
@@ -195,21 +244,28 @@ Inspired by the following tutorial:
 }
 
 /*video preview*/
-.video{
-    width: 100%; /* Full width of its container */
+.video {
+    width: 100%;
+    /* Full width of its container */
     height: 32rem;
     margin-top: 0;
 }
+
 .video-preview {
     width: 100%;
     display: block;
-    margin-bottom: 1rem; /* Space below the image */
-    text-align: center; /* Center the image if needed */
+    margin-bottom: 1rem;
+    /* Space below the image */
+    text-align: center;
+    /* Center the image if needed */
 }
+
 .video-preview img {
-    max-width: 100%; /* Scale down on smaller screens */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; 
+    max-width: 100%;
+    /* Scale down on smaller screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
     /* Additional styling specific to this image */
 }
 
@@ -217,21 +273,27 @@ Inspired by the following tutorial:
 /* Hamburger Menu and Side Menu (Mobile Screens) */
 /* Hidden checkbox for controlling the hamburger menu */
 .kontrol {
-    display: none; /* Hidden on larger screens */
+    display: none;
+    /* Hidden on larger screens */
 }
 
 #kontrol {
-    display: none; /* Hides the checkbox itself */
+    display: none;
+    /* Hides the checkbox itself */
 }
 
 /* Side Menu on the Home Page */
 .side-menu {
     grid-area: side-menu;
-    background-color: #f4f4f4; /* Light gray background for the menu */
+    background-color: #f4f4f4;
+    /* Light gray background for the menu */
     display: flex;
-    flex-direction: column;/* Align items vertically */
-    align-items: flex-start; /* Aligns items to the start of the container */
-    padding: 0.625rem; /* Padding equivalent to 10px */
+    flex-direction: column;
+    /* Align items vertically */
+    align-items: flex-start;
+    /* Aligns items to the start of the container */
+    padding: 0.625rem;
+    /* Padding equivalent to 10px */
 }
 
 /* 
@@ -245,15 +307,18 @@ Inspired by the following resources:
 
 /* Side menu links */
 .side-link {
-    width: 100%; /* Full width of the menu */
+    width: 100%;
+    /* Full width of the menu */
     padding: 0.6rem;
     margin-bottom: 0.3rem;
     background-color: #007acd;
     color: white;
     border: none;
-    cursor: pointer;/* Adds pointer cursor for interactivity */
+    cursor: pointer;
+    /* Adds pointer cursor for interactivity */
     text-align: left;
-    font-size: 1.2rem;/* Larger font size for readability */
+    font-size: 1.2rem;
+    /* Larger font size for readability */
     border-radius: 0.3rem;
 }
 
@@ -264,45 +329,58 @@ Inspired by the following resources:
 
 /* Toggle for opening/closing panels */
 .panel-toggle {
-    display: none; /* Initially hidden until triggered */
+    display: none;
+    /* Initially hidden until triggered */
 }
 
 /* Info Panel (content displayed when side-link is clicked) */
 .info-panel {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     background-color: #f8f8f8;
     padding: 1rem;
-    border: 1px solid #ddd; /* Light gray border for separation */
+    border: 1px solid #ddd;
+    /* Light gray border for separation */
     margin-top: 1rem;
     border-radius: 0.3rem;
-    position: absolute; /* Positioned relative to the parent */
-    top: 0; /* Aligns panel to the top */
-    left: 0; /* Aligns panel to the left */
-    width: 100%;  
-    max-width: 100%; 
-    text-align: left; 
-    visibility: hidden; /* Initially invisible */
-    overflow: hidden; /* Hides content outside the container */
-    word-wrap: break-word; /* Breaks long text into multiple lines */
-    transition: max-height 0.5s ease-out; /* Smooth transition when opening/closing */
+    position: absolute;
+    /* Positioned relative to the parent */
+    top: 0;
+    /* Aligns panel to the top */
+    left: 0;
+    /* Aligns panel to the left */
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    visibility: hidden;
+    /* Initially invisible */
+    overflow: hidden;
+    /* Hides content outside the container */
+    word-wrap: break-word;
+    /* Breaks long text into multiple lines */
+    transition: max-height 0.5s ease-out;
+    /* Smooth transition when opening/closing */
 }
 
 /* Displays the info panel when the corresponding radio button is checked */
-.panel-toggle:checked + .info-panel {
+.panel-toggle:checked+.info-panel {
     display: block;
-    visibility: visible; /* Makes the panel visible */
-    max-height: none; /* Removes height restriction when opened */
+    visibility: visible;
+    /* Makes the panel visible */
+    max-height: none;
+    /* Removes height restriction when opened */
 }
 
-input[type="radio"]:checked + label + .info-panel {
-    display: block; /* Displays the panel when it is checked */
+input[type="radio"]:checked+label+.info-panel {
+    display: block;
+    /* Displays the panel when it is checked */
 }
 
 /* Close button for the info panel */
 .close-btn {
     position: absolute;
-    top: 0.625rem; 
-    right: 0.625rem; 
+    top: 0.625rem;
+    right: 0.625rem;
     background: none;
     border: none;
     color: #666;
@@ -311,13 +389,16 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /* Link styling */
-.samordlink{ 
-    color:blue; /* Blue to indicate a clickable link */
+.samordlink {
+    color: blue;
+    /* Blue to indicate a clickable link */
 }
 
 .samordlink:visited {
-    color: purple; /* Changes color after the link is visited */
-    text-decoration-color: rgb(78, 13, 110); /* Changes underline color to purple */
+    color: purple;
+    /* Changes color after the link is visited */
+    text-decoration-color: rgb(78, 13, 110);
+    /* Changes underline color to purple */
 }
 
 /* Button design for ACIT page redirection */
@@ -339,7 +420,8 @@ input[type="radio"]:checked + label + .info-panel {
 /* Styling for each information block */
 .shortinfo {
     /*padding: 0.2rem 0;  Adds spacing top and bottom */
-    border-bottom: 1px solid #00093c; /* Adds a bottom border with a dark blue color */
+    border-bottom: 1px solid #00093c;
+    /* Adds a bottom border with a dark blue color */
 }
 
 /* Remove the bottom border for the last information block */
@@ -350,7 +432,8 @@ input[type="radio"]:checked + label + .info-panel {
 
 /* Style for informational text */
 .shortinfo p {
-    margin: 0.1rem 0 0; /* Adds a small top margin below the title */
+    margin: 0.1rem 0 0;
+    /* Adds a small top margin below the title */
     color: #555;
 }
 
@@ -364,24 +447,25 @@ input[type="radio"]:checked + label + .info-panel {
     border-radius: 8px;
     background-color: #f9f9f9;
     width: 20rem;
-    height:auto;
+    height: auto;
 }
 
 .mat-studie .image {
-    width: 50px; 
-    height: auto; 
-    object-fit: contain; 
-    border-radius: 8px; 
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 
 /* Table Styles for Study Programs at studiepro page*/
 
 /* Display the appropriate table when a specific radio button is selected */
-#matematik-fysikk:checked ~ .studie-table-container #matematik-fysikk-prog,
-#statistik-data:checked ~ .studie-table-container #statistik-data-prog,
-#vitenskapelige-beregninger:checked ~ .studie-table-container #vitenskapelige-beregninger-prog {
-    display: block;/* Shows the corresponding study program table */
+#matematik-fysikk:checked~.studie-table-container #matematik-fysikk-prog,
+#statistik-data:checked~.studie-table-container #statistik-data-prog,
+#vitenskapelige-beregninger:checked~.studie-table-container #vitenskapelige-beregninger-prog {
+    display: block;
+    /* Shows the corresponding study program table */
 }
 
 /*Buton for studiene at studiepro page*/
@@ -405,30 +489,34 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /*Studie table at studiepro page*/
-  table {
+table {
     width: 100%;
-    border-collapse: collapse; /* Collapses table borders */
-  }
-  
-  th, td {
+    border-collapse: collapse;
+    /* Collapses table borders */
+}
+
+th,
+td {
     padding: 0.4rem 0.6rem;
     text-align: left;
-    border-bottom: 1px solid #2d3223;/* Dark border below each row */
-  }
-  
-  /*header of table*/
-  th {
-    margin:0.5rem;
+    border-bottom: 1px solid #2d3223;
+    /* Dark border below each row */
+}
+
+/*header of table*/
+th {
+    margin: 0.5rem;
     background-color: rgb(4, 37, 88);
     color: white;
     text-align: center;
-    font-weight: bold; /* Makes header text bold */
-  }
-  
-  /* Study program tables are initially hidden */
-  .table {
+    font-weight: bold;
+    /* Makes header text bold */
+}
+
+/* Study program tables are initially hidden */
+.table {
     display: none;
-  }
+}
 
 
 /*"The section below the video"*/
@@ -458,7 +546,8 @@ input[type="radio"]:checked + label + .info-panel {
     border-bottom: 1px solid #ddd;
     font-weight: 400;
 }
-.accordion label:hover{
+
+.accordion label:hover {
     background-color: #00093c;
 }
 
@@ -478,89 +567,102 @@ input[type="radio"]:checked + label + .info-panel {
 }
 
 /* "Displaying content when open" */
-.accordion input[type="checkbox"]:checked ~ .content {
-    max-height: 1000px; /* "You can adjust the value based on the content" */
+.accordion input[type="checkbox"]:checked~.content {
+    max-height: 1000px;
+    /* "You can adjust the value based on the content" */
     padding: 15px;
 }
 
 /* "1st panel design" */
-.spoor-link-design1{
+.spoor-link-design1 {
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
 
-.spoor-link-design2{
+.spoor-link-design2 {
     color: black;
     font-size: 28px;
     font-family: Arial, sans-serif;
     font-weight: 800;
 
 }
-.spoor-link-design3{
+
+.spoor-link-design3 {
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
-.spoor-link-design4{
+
+.spoor-link-design4 {
     font-size: 18px;
     font-family: Arial, sans-serif;
     font-weight: 400;
 }
 
 /* "2nd panel link design"*/
-.link-design1{
+.link-design1 {
     border-bottom-style: solid;
     border-bottom-color: #222;
     font-family: Arial, sans-serif;
 }
 
-.link-design3{
+.link-design3 {
     font-weight: 700;
 }
-.link-design4{
+
+.link-design4 {
     color: #222;
 
-/* "3rd panel design" */
+    /* "3rd panel design" */
 }
-.images-613{
+
+.images-613 {
     width: 650px;
 }
-.bilde-design{
-    display: flex; /* "Flexbox is enabled" */
-    justify-content: center; /* "Horizontal alignment" */
+
+.bilde-design {
+    display: flex;
+    /* "Flexbox is enabled" */
+    justify-content: center;
+    /* "Horizontal alignment" */
 
 }
-.st-his-link-design1{
+
+.st-his-link-design1 {
     font-weight: 600;
     font-size: 16px;
 }
 
 
-.st-his-link-design2-1{
+.st-his-link-design2-1 {
     font-size: 28px;
     margin-top: 50px;
     font-weight: 700;
 }
-.st-his-link-design2-2{
+
+.st-his-link-design2-2 {
     font-size: 18px;
     margin-top: -10px;
     color: #222;
     font-weight: 400;
 }
-.st-his-link-design3{
+
+.st-his-link-design3 {
     font-size: 28px;
     margin-top: 40px;
     font-weight: 700;
-    display: flex; /* "Flexbox is activated" */
-    justify-content: center; /* "Horizontal centering" */
+    display: flex;
+    /* "Flexbox is activated" */
+    justify-content: center;
+    /* "Horizontal centering" */
 }
 
 
 
 
 /*---------------------------------Footer-----------------------------------------*/
-footer{
+footer {
     width: 100%;
     position: relative;
     bottom: 0;
@@ -570,18 +672,20 @@ footer{
     font-size: 13px;
     line-height: 20px;
 }
-   
-.row{
+
+.row {
     width: 85%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items:flex-start ;
+    align-items: flex-start;
     justify-content: space-between;
-    gap:1rem; /*decrerases the distance between the rows*/
-    
+    gap: 1rem;
+    /*decrerases the distance between the rows*/
+
 }
-.column{
+
+.column {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -591,53 +695,65 @@ footer{
 }
 
 .column p {
-    font-size: 1.2rem; /* "Increase the font size" */
-    line-height: 1.4; /* "Adjust the line spacing" */
-}
-.column p a{
-    font-size: 1.3rem;;
+    font-size: 1.2rem;
+    /* "Increase the font size" */
+    line-height: 1.4;
+    /* "Adjust the line spacing" */
 }
 
-.column h3{
-    color: white;
-   font-size: x-large;
-   margin-top:5px ;
-   font-weight: bold;
-  white-space: nowrap;
-   padding: 2rem;
-   margin-bottom: 0;
-   
+.column p a {
+    font-size: 1.3rem;
+    ;
 }
+
+.column h3 {
+    color: white;
+    font-size: x-large;
+    margin-top: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 2rem;
+    margin-bottom: 0;
+
+}
+
 .contact-link {
-    display: block; /* "Move the link to a new line" */
+    display: block;
+    /* "Move the link to a new line" */
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    margin-top: 60px; /* "Adds some spacing from the top" */
+    margin-top: 60px;
+    /* "Adds some spacing from the top" */
     text-decoration: underline;
 }
-    .contact-link:hover{
-        text-decoration: underline;
-    }
-ul li{
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+ul li {
     list-style: none;
     margin-bottom: 12px;
 }
-ul li a{
-    text-decoration:underline ;
+
+ul li a {
+    text-decoration: underline;
     color: white;
-    
+
 }
 
 
-.column i{
+.column i {
     display: block;
     margin-bottom: 10px;
     text-align: left;
-    font-size: 2rem; /*to make the social media icons bigger*/
+    font-size: 2rem;
+    /*to make the social media icons bigger*/
 }
-.column a{
+
+.column a {
     color: white;
     font-size: 1rem;
     margin-bottom: 10px;
@@ -645,8 +761,9 @@ ul li a{
     transition: transform 0.3s ease;
     padding: 5px 10px;
 }
+
 .column a:hover,
-.column a:focus{
+.column a:focus {
     transform: scale(1.1);
     /*"If it is desired to appear in a box shape, `outline: 2px solid white;` can be added."*/
     outline-offset: 4px;
@@ -659,14 +776,15 @@ ul li a{
     gap: 10px;
     text-align: center;
     width: 100%;
-  
+
 }
 
 .social-media-grid a {
     color: white;
     font-size: 1.2rem;
     transition: transform 0.3s ease;
-    text-decoration: underline; /*underlines the names of the links*/
+    text-decoration: underline;
+    /*underlines the names of the links*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -679,7 +797,8 @@ ul li a{
 
 .social-media-grid i {
     margin-right: 8px;
-    font-size: 1.8rem; /* "Icon size" */
+    font-size: 1.8rem;
+    /* "Icon size" */
 }
 
 /* -------------------------"Footer codes end here. -------------------------------------------."*/
@@ -688,82 +807,120 @@ ul li a{
 /*---------------------------------Activity Page Design STARTS-----------------------------------*/
 /*general stYle of the main */
 .main {
-    max-width: 1800px; /* Limit the content width. */
-    margin: 0 auto; /* centers the elements*/
+    max-width: 1800px;
+    /* Limit the content width. */
+    margin: 0 auto;
+    /* centers the elements*/
 }
+
 /*styling codes for rhe background container*/
 .background-container {
-     max-width: 1200%; /*  streches the width of the backgound container completely*/
-     gap: 2rem;
-     padding: 20px; /*"Add padding between the content and the edges." */
-     background-color: #b3e5fc; /*makes background light blue color*/
-     border-radius: 10px; /* round the corners*/
-     box-sizing: border-box; /* used to prevent overflow*/
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* added a bit shadow */
-     margin: 2.5rem;
-     
+    max-width: 1200%;
+    /*  streches the width of the backgound container completely*/
+    gap: 2rem;
+    padding: 20px;
+    /*"Add padding between the content and the edges." */
+    background-color: #b3e5fc;
+    /*makes background light blue color*/
+    border-radius: 10px;
+    /* round the corners*/
+    box-sizing: border-box;
+    /* used to prevent overflow*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* added a bit shadow */
+    margin: 2.5rem;
+
 }
+
 /*the head title*/
-.introduksjontittel{
+.introduksjontittel {
     padding-top: 1rem;
-    text-align: center;/*keeps the text in the middle of the place*/
-    font-size: 2.5rem;/*it fits better to the page with this font size*/
-   
+    text-align: center;
+    /*keeps the text in the middle of the place*/
+    font-size: 2.5rem;
+    /*it fits better to the page with this font size*/
+
 }
+
 /*styling codes of the first section part. inroduction part*/
 .aktivitetsoversikt {
-    text-align: center;/*keeps the title in the  center*/
+    text-align: center;
+    /*keeps the title in the  center*/
     width: 100%;
-    line-height: 1.8; /* used to increase the line spacing */
-    
+    line-height: 1.8;
+    /* used to increase the line spacing */
+
 }
+
 /*styling of the subtitle. used to center it*/
-.aktivitetsoversikt h2{
-    text-align: center;/*keeps the subtitle in the center of the page*/
+.aktivitetsoversikt h2 {
+    text-align: center;
+    /*keeps the subtitle in the center of the page*/
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 /*image container styling */
 .image-container {
-    display: grid; /* used to make elements 2 column grid container */
-    grid-template-columns: 1fr 1fr;/*kepp the images in the same grid container*/
-    object-fit: contain;/*used to fit the images entirely in the container*/
-    gap: 20px; /* leaves space between images*/
-    justify-content: center; /* keeps the images (grid container) in the center */
+    display: grid;
+    /* used to make elements 2 column grid container */
+    grid-template-columns: 1fr 1fr;
+    /*kepp the images in the same grid container*/
+    object-fit: contain;
+    /*used to fit the images entirely in the container*/
+    gap: 20px;
+    /* leaves space between images*/
+    justify-content: center;
+    /* keeps the images (grid container) in the center */
 }
 
 .image-figure-intro img {
-    width:100%; /* the width of the images */
-  }
+    width: 100%;
+    /* the width of the images */
+}
 
-  .image-figure-intro figcaption {
-    font-size: 1.2rem; /* resized to make it more readable */
-    color: #555; /* color of the figcaption text */
-    text-align: center;/*is alligned in the center under the images*/
-  }
+.image-figure-intro figcaption {
+    font-size: 1.2rem;
+    /* resized to make it more readable */
+    color: #555;
+    /* color of the figcaption text */
+    text-align: center;
+    /*is alligned in the center under the images*/
+}
 
-  .aktivitetsoversikt article{
-    text-align: justify; /*used to align the text to both the left and the right margins*/
-    font-size: 1.5rem;/*used this size to make it easier to read for the users*/
-    margin: 0 auto;/*used to leave equal margins on the sides*/
-    max-width: 90%;/*used to keep the content a bit smaller in the page and it fits better with this way*/  
-    padding-bottom: 2rem;/*make space between the text and the white grid*/
+.aktivitetsoversikt article {
+    text-align: justify;
+    /*used to align the text to both the left and the right margins*/
+    font-size: 1.5rem;
+    /*used this size to make it easier to read for the users*/
+    margin: 0 auto;
+    /*used to leave equal margins on the sides*/
+    max-width: 90%;
+    /*used to keep the content a bit smaller in the page and it fits better with this way*/
+    padding-bottom: 2rem;
+    /*make space between the text and the white grid*/
 }
 
 /*styling codes of the white grids*/
 .grid-container-activity {
-    display: grid; /* used to make elements (text and the image) 2 column grid container */
-    gap: 3rem; /* used to leave space between the grids */
-    margin: 0 auto;/*centers the grids in the page*/
-    max-width: 90%; /*adjusted the size of grids to 90% to make a good look and design. So,it will be placed inside the blue background nicely*/   
+    display: grid;
+    /* used to make elements (text and the image) 2 column grid container */
+    gap: 3rem;
+    /* used to leave space between the grids */
+    margin: 0 auto;
+    /*centers the grids in the page*/
+    max-width: 90%;
+    /*adjusted the size of grids to 90% to make a good look and design. So,it will be placed inside the blue background nicely*/
 }
+
 /*styling of items inside the white grids*/
 .grid-item-activity {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* created to coloumn grids*/
+    grid-template-columns: 1fr 1fr;
+    /* created to coloumn grids*/
     justify-content: center;
     align-items: center;
-    gap:4.5rem;
+    gap: 4.5rem;
     background-color: #ffffff;
     border: 1px solid #292727;
     border-radius: 8px;
@@ -773,35 +930,41 @@ ul li a{
 }
 
 .grid-item-activity article {
-    margin-top:3rem;
+    margin-top: 3rem;
     margin-left: 2rem;
-    text-align: left;/*keeps te text on the left side*/
+    text-align: left;
+    /*keeps te text on the left side*/
     margin: 1rem;
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used to adjust the size of font */  
-    
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    /* used to adjust the size of font */
+
 }
+
 .grid-item-activity p {
     display: grid;
     line-height: 1.8rem;
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used for adjusting the size of font */
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    /* used for adjusting the size of font */
 }
 
 .grid-item-activity img {
     width: 100%;
-    text-align: center;/*aligns the items in the center*/
+    text-align: center;
+    /*aligns the items in the center*/
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-  
-  }
 
-/* sub-headings */
-.grid-item-activity h3{
-  color: #0805f0;
-  line-height: 3rem;
-  font-size: clamp(1.5rem, 1.5vw, 1.2rem); /* "Text size is limited" */
 }
 
-.grid-item-activity figure{
+/* sub-headings */
+.grid-item-activity h3 {
+    color: #0805f0;
+    line-height: 3rem;
+    font-size: clamp(1.5rem, 1.5vw, 1.2rem);
+    /* "Text size is limited" */
+}
+
+.grid-item-activity figure {
     margin-right: 0;
     flex: 0 0 auto;
     justify-content: flex-end;
@@ -809,33 +972,44 @@ ul li a{
 
 
 /*css codes of the figcaption*/
-.grid-item-activity figcaption{
+.grid-item-activity figcaption {
     color: #4b4848;
     padding: 0.5rem;
     margin-bottom: 2rem;
-  font-style: italic;
-  text-align: center;/*"Centers the caption below the image"*/
- 
+    font-style: italic;
+    text-align: center;
+    /*"Centers the caption below the image"*/
+
 }
 
 /* css coding of the links */
 /* it will be seen with these codes on the page*/
-.activity-knapp , .activity-link {
-    color: #007acd; /* links will be this color */
-    text-decoration: underline; /* text is underlined*/
-    font-weight: bold;/*make it bold for more visibility*/
-  
+.activity-knapp,
+.activity-link {
+    color: #007acd;
+    /* links will be this color */
+    text-decoration: underline;
+    /* text is underlined*/
+    font-weight: bold;
+    /*make it bold for more visibility*/
+
 }
 
 /* Hover css of the links */
-.activity-knapp:hover, .activity-link:hover {
-    color: #0056b3; /* "Darkens on hover" */
-    text-decoration: underline; /* text is underlined for more visibility */
+.activity-knapp:hover,
+.activity-link:hover {
+    color: #0056b3;
+    /* "Darkens on hover" */
+    text-decoration: underline;
+    /* text is underlined for more visibility */
 }
+
 /* css for The links after thet clicked*/
-.activity-knapp:visited, .activity-link:visited {
-    color: #840db3; /* when it is clicked, the color turns to purple*/
-    
+.activity-knapp:visited,
+.activity-link:visited {
+    color: #840db3;
+    /* when it is clicked, the color turns to purple*/
+
 }
 
 /*------------------------activity page design is finished ----------------------*/
@@ -846,93 +1020,120 @@ ul li a{
 
 
 
-/*---------------------------------------ACCESIBILITY PAGE design starts--------------------------------*/
-.accesibility-page{
+/*----------------ACCESIBILITY PAGE design starts-------------------*/
+.accesibility-page {
     background-color: #ffffff;
-  margin: 0 auto; /*"To align in the center"*/
-  padding: 0 5%; /* "Leaves a 5% margin on the left and right sides of the screen" */
-}
-.accesibility-page h1{
-    text-align: center; /*keeps the title in the center of the page*/
-    margin-top: 4rem; /*to make a space betwen hesader and he title*/
-    font-size: 3.5rem;
-}
-.accesibility-page p{
-    padding-left: 2rem; /*gives space between the website frame and the text*/
-    padding-right: 2rem; /*gives space between the website frame and the text*/
-    padding-bottom: 1rem;/*used to make the space between paragraph and the images*/
-    line-height:3rem; /*used to leave spaces between the lines, to make it easier to read.*/
-    margin-bottom:0.5rem;
-    font-size: 1.5rem;
- 
+    margin: 0 auto;
+    /*"To align in the center"*/
+    padding: 0 5%;
+    /* "Leaves a 5% margin on the left and right sides of the screen" */
 }
 
-.accesibility-page-images{
-    display: grid; /* "Use flexbox to arrange side by side" */
-    grid-template-columns: 1fr 1fr; /*gereksiz olabilir bu kod geri don BAKKKKKKK*/
+.accesibility-page h1 {
+    text-align: center;
+    /*keeps the title in the center of the page*/
+    margin-top: 4rem;
+    /*to make a space betwen hesader and he title*/
+    font-size: 3.5rem;
+}
+
+.accesibility-page p {
+    padding-left: 2rem;
+    /*gives space between the website frame and the text*/
+    padding-right: 2rem;
+    /*gives space between the website frame and the text*/
+    padding-bottom: 1rem;
+    /*used to make the space between paragraph and the images*/
+    line-height: 3rem;
+    /*used to leave spaces between the lines, to make it easier to read.*/
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+
+}
+
+.accesibility-page-images {
+    display: grid;
+    /* "Use flexbox to arrange side by side" */
+    grid-template-columns: 1fr 1fr;
+    /*gereksiz olabilir bu kod geri don BAKKKKKKK*/
     padding: 3rem;
-    gap: 4rem; /* "Spacing between images" */
-    justify-content: center; /* "Centers the images" */
-    align-items: start; /* "Aligns the top of the images" */
+    gap: 4rem;
+    /* "Spacing between images" */
+    justify-content: center;
+    /* "Centers the images" */
+    align-items: start;
+    /* "Aligns the top of the images" */
 }
 
 .accesibility-page-images figure {
     display: grid;
-    align-items: center; /* Center-align the content */
-    text-align: center; /* Center text within the figure */
+    align-items: center;
+    /* Center-align the content */
+    text-align: center;
+    /* Center text within the figure */
 
 }
-.accesibility-page-images img{
 
-    width: 100%; /* "Expands according to the container" */
+.accesibility-page-images img {
+
+    width: 100%;
+    /* "Expands according to the container" */
     height: auto;
-    max-width: 100%; /* "The image does not overflow the container" */
-    aspect-ratio: 16/9; /* "Maintains the aspect ratio" */
-    object-fit: contain; /* "To display the entire image" */
+    max-width: 100%;
+    /* "The image does not overflow the container" */
+    aspect-ratio: 16/9;
+    /* "Maintains the aspect ratio" */
+    object-fit: contain;
+    /* "To display the entire image" */
     border-radius: 8px;
-    border:solid #000064;
+    border: solid #000064;
 
 }
 
 
-    .accesibility-page-images figcaption {
-      font-size: 1rem; /* "Caption font size" */
-      color: #555; /* "Text color" */
-      margin-top: 0;
-      padding-top:1rem
+.accesibility-page-images figcaption {
+    font-size: 1rem;
+    /* "Caption font size" */
+    color: #555;
+    /* "Text color" */
+    margin-top: 0;
+    padding-top: 1rem
+}
+
+.accesibility-testing {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth and emphasis */
+    min-height: 400px;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Three columns of equal width */
+    gap: 30px;
+    width: 90%;
+    box-shadow: #000;
+    box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1);
+    /* added a bit shadow */
+    /*  styles of the subtitles in the accesibility-testing section */
+}
 
 
 
-    }
-    .accesibility-testing {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
-        min-height: 400px;
-        margin: 2rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
-        gap: 30px;
-        width: 90%;
-        box-shadow: #000;
-        box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1); /* added a bit shadow */
-        /*  styles of the subtitles in the accesibility-testing section */
-    }
-    
+/* styleling the articles inside the section */
 
-
-  /* styleling the articles inside the section */
-
-  .accesibility-testing article {
+.accesibility-testing article {
     background-color: #a1d6fa;
     padding: 0.5rem;
     border-radius: 5px;
-   
-    
-  }
-  .accesibility-testing article p{
+
+
+}
+
+.accesibility-testing article p {
     font-size: 1.1rem;
     padding: 0.6rem;
- 
-  }
+
+}
+
 /* -----------------accesibility design finished here-------------*/
 
 
@@ -946,89 +1147,87 @@ https://www.w3schools.com/css/css3_images.asp
 */
 
 .GitHubPageMain {
-    padding: 2rem;
-    font-family: Arial;
-    line-height: 1.6;
-    color: #334;
-    text-align: center;
+    padding: 2rem;/* Adds space around the main content area */
+    font-family: Arial;/* Sets the font family for the text */
+    line-height: 1.6;/* Adjusts the line spacing for better readability */
+    color: #334;/* Sets the text color to a dark gray */
+    text-align: center;/* Centers the text content within the main area */
 }
 
 .GitHubPageImages {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    /*margin-bottom: ;*/
-    padding: 0;
+    display: grid;/* Creates a grid layout for the images */
+    grid-template-columns: repeat(2, 1fr);/* Defines two columns with equal width */
+    gap: 1rem;/* Adds space between the images */
+    padding: 0;/* Removes default padding */
 }
 
 .GitHubPageimage {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
+    width: 100%;/* Makes the images responsive to the container width */
+    height: auto;/* Maintains the aspect ratio of the images */
+    border-radius: 1rem;/* Rounds the corners of the images */
 }
+
 .GitHubPageimage:hover {
-    transform: scale(1.09);
+    transform: scale(1.09);/* Slightly enlarges the image on hover for a zoom effect */
 }
 
-figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.GitHubPageFigure {
+    margin: 0;/* Removes default margin around the figure element */
+    padding: 0;/* Removes default padding around the figure element */
+    text-align: center;/* Centers the figure content */
 }
 
-figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.3rem;
+.GitHubPageFigcaption {
+    font-size: 0.85rem;/* Sets a smaller font size for the caption */
+    color: #555;/* Changes the caption text color to a medium gray */
+    margin-top: 1rem;/* Adds space above the caption */
 }
 
 .GitHubPageTextContent {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    border: 0.05rem solid #ddd;
-    border-radius: 0.5rem;
+    max-width: 800px;/* Limits the width of the text content area */
+    margin: 2rem auto;/* Centers the text content with spacing above and below */
+    padding: 1.5rem;/* Adds space inside the content box */
+    border: 0.05rem solid #ddd;/* Adds a subtle border around the content box */
+    border-radius: 0.5rem;/* Slightly rounds the corners of the content box */
 }
 
 .GitHubPageTextContent h3 {
-    color: #0056b3;
-    font-size: 1.5rem;
+    color: #0056b3;/* Sets the header text color to blue */
+    font-size: 1.5rem;/* Increases the font size for headers */
 }
 
 .GitHubPageTextContent h3:not(:first-of-type) {
-    border-top: 0.04rem solid #dde;
-    padding-top: 1rem;
-    margin-top: 1.6rem;
+    border-top: 0.04rem solid #dde;/* Adds a border above all headers except the first */
+    padding-top: 1rem;/* Adds space above the header text */
+    margin-top: 1.6rem;/* Adds spacing between headers */
 }
 
 .GitHubPageTextContent p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.7;
-    text-indent: 2.3rem;
-
-
+    margin-bottom: 1rem;/* Adds space below paragraphs */
+    font-size: 1rem;/* Sets the font size for paragraphs */
+    text-align: left;/* Aligns the paragraph text to the left */
+    line-height: 1.7;/* Adds more line spacing for better readability */
+    text-indent: 2.3rem;/* Indents the first line of each paragraph */
 }
 
+
 /*###################################################################*/
-/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+/*CSS SETTINGS FOR TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
 @media (max-width: 480px) {
 
     /*HOMEPAGE-CSS*/
 
     .search-box {
         justify-self: left;
-        margin-left:0;
-        margin-right:0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* Hamburger menu design: 
    Inspired by the following tutorials:
    - https://www.youtube.com/watch?v=x3Zu_ncHpas&list=WL&index=6
-   - https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s 
-*/
-    
+   - https://www.youtube.com/watch?v=uSHc2YLGBSM&t=1257s */
+
     /*Navbar Hamburger Menu/Toogle Menu*/
     /* "Hamburger menu icon" */
     .kontrol {
@@ -1062,7 +1261,7 @@ figcaption {
         flex-direction: column;
         padding: 0;
         margin: 0;
-        right:3.5rem;
+        right: 3.5rem;
     }
 
     .menu ul li {
@@ -1071,16 +1270,16 @@ figcaption {
     }
 
     .menu a {
-        background-color:#000064;
+        background-color: #000064;
         font-size: 1rem;
     }
 
     .menu a.active {
-       font-size:1.1rem;
+        font-size: 1.1rem;
     }
 
     /* "Show from the right when the menu is opened" */
-    #kontrol:checked ~ .menu {
+    #kontrol:checked~.menu {
         right: 0;
     }
 
@@ -1090,352 +1289,460 @@ figcaption {
     }
 
     .kontrol .fa-times {
-        display: none; /* "X is initially hidden"*/
+        display: none;
+        /* "X is initially hidden"*/
     }
 
     /* "The icon changes when the hamburger menu is opened" */
-    #kontrol:checked + .kontrol .fa-bars {
-        display: none; /* "The three lines are hidden" */
+    #kontrol:checked+.kontrol .fa-bars {
+        display: none;
+        /* "The three lines are hidden" */
     }
 
-    #kontrol:checked + .kontrol .fa-times {
-        display: inline-block; /* "The X becomes visible"*/
+    #kontrol:checked+.kontrol .fa-times {
+        display: inline-block;
+        /* "The X becomes visible"*/
     }
 
     /*Homepage header h1*/
-    .page-header1{
+    .page-header1 {
         font-size: 1rem;
     }
 
     /*Homepage header h2*/
-    .page-header2{
+    .page-header2 {
         font-size: 0.7rem;
     }
+
     /*Homepage video*/
-    .video{
-        width: 100%; /* Full width of its container */
+    .video {
+        width: 100%;
+        /* Full width of its container */
         height: 20rem;
         margin-top: 0rem;
     }
 
     /* Mobile side-link layout */
     .side-link {
-        position: relative; /* Reference for positioning the info-panel */
+        position: relative;
+        /* Reference for positioning the info-panel */
         font-size: 1rem;
-        z-index: 5; /* The side-link is positioned behind the panel. */
-        padding: 0.2rem;
-        margin-bottom: 0.15rem;
-    }
-
-    /*Studie table radio buttons*/
-    .label-matematik,
-    .label-statistik,
-    .label-vitenskapelige {
-    padding: 0.2rem 0.2rem;
-    color: white;
-    margin-right: 0.1rem;
-    border-radius: 0.1rem;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #2b6fb7;
-    font-size: 0.9rem;
-
-
-
-
-    /*GitHub page-CSS for mobile*/
-    .GitHubPageMain {
-        padding: 1rem;
-    }
-
-    .GitHubPageImages {
-        gap: 1rem;
-    }
-}
-
-
-/*###################################################################*/
-/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
-@media (min-width:480px) and (max-width: 768px) {
-    /*HOMEPAGE-CSS*/
-    /*Header h1*/
-    .page-header1{
-        font-size: 1.8rem;
-    }
-
-    /*Header h2*/
-    .page-header2{
-        font-size: 1.5rem;
-
-    }
-    .video{
-        width: 100%; /* Full width of its container */
-        height: 20rem;
-        margin-top: 0rem;
-    }
-
-    .search-box {
-        justify-self: left;
-        margin-left:0;
-        margin-right:0;
-    }
-    
-
-    /* "Grid layout adjustment on mobile" */
-    .grid-container-home {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "side-menu"
-            "main-content"
-            "accordion";
-    }
-
-    .side-menu {
-        grid-area: side-menu;
-        display: flex;
-        flex-direction: column; /* "To align menu items horizontally" */
-        justify-content: flex-start; /* "To align the items by centering them" */
-        gap: 0.1rem; /* "Spacing between menu items" */
-        background-color: #ddd; /* "Background color for visual distinction" */
         z-index: 5;
-        padding: 0.1rem; /* "Narrower padding for the horizontal menu" */
-    }
-
-
-    .main-content-home {
-        position: relative; /* "Provides a reference for the info-panel" */
-        z-index: 1; /* "Remains below the panel" */
-    }
-
-
-        /* "Info-panels in mobile view" */
-    .info-panel {
-        position: absolute; /* "Positioned relative to the parent element" */
-        top: 0; /* "Aligned from the top relative to the side-link" */
-        left: 0; /* "Aligned from the left relative to the side-link" */
-        z-index: 10; /* "A high value is assigned for it to appear on top" */
-        width: 100%; /* "Full width on mobile" */
-        max-width: none; /* "The width limit is removed" */
-        visibility: hidden; /* "Hidden by default" */
-        max-height: 0; /* "The height is zero when closed" */
-        transition: all 0.5s ease-out; /* "Smooth transition" */
-        margin: 0; /* "The spacing between panels is removed" */
-        overflow: hidden; /* Content overflow is prevented */
-        background-color: #f8f8f8; /* The background of the panel */
-        padding: 1rem; /* Padding for the panel content */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
-    }
-
-    /* When the panel appearance is triggered */
-    .panel-toggle:checked + .info-panel {
-        visibility: visible;
-        max-height: 300px; /* Maximum height when open */
-        overflow: auto; /* Long content becomes scrollable */
-    }
-
-    /* Mobile side-link layout */
-    .side-link {
-        position: relative; /* Reference for positioning the info-panel */
-        font-size: 1rem;
-        z-index: 5; /* The side-link is positioned behind the panel. */
+        /* The side-link is positioned behind the panel. */
         padding: 0.2rem;
         margin-bottom: 0.15rem;
-    }
-
-
-    /* Close button layout */
-    .close-btn {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        font-size: 1.2rem;
-        color: #000;
-        background: none;
-        border: none;
-        cursor: pointer;
     }
 
     /*Studie table radio buttons*/
     .label-matematik,
     .label-statistik,
     .label-vitenskapelige {
-    padding: 0.2rem 0.2rem;
-    color: white;
-    margin-right: 0.1rem;
-    border-radius: 0.1rem;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #2b6fb7;
-    font-size: 0.9rem;
-}
-/*In the activity page, the grid item activity is set to a single column.*/
-.grid-container-activity {
-    grid-template-columns: 1fr; /* Switch to a single column. */
-    gap: 2rem; /* The space between the boxes. */
-}
-
-.grid-item-activity {
-    display: flex;
-    flex-direction: column; /* Align the content vertically. */
-    align-items: center; /* Center the content. */
-    text-align: center; /*Center the text. */
-}
-
-.grid-item-activity figure {
-    width: 100%; /* Image container width */
-    margin-bottom: 1rem; /* The space between the text and the image. */
-}
-
-.grid-item-activity img {
-    width: 90%; /* Make the image smaller and center it. */
-    height: auto; /* Resize while keeping the aspect ratio. */
-}
-
-.grid-item-activity article {
-    width: 100%; /* Adjust the article width. */
-}
-
-
-    /*-------------------Activity page tablet codes------------------*/
-    h1.introduksjontittel {
-        font-size: 1.8rem; /* Smaller size for small screens */
-        text-align: center; /* Center the text */
-        line-height: 1.4; /* Add space between lines */
-    }
-    .image-container {
-        grid-template-columns: 1fr;  
-      
-    }
-    .image-figure-intro img {
-        width: 100%; /* "The image fits the box at full width" */
-        height: auto; /* "The height is adjusted while maintaining its aspect ratio" */
-        object-fit: contain; /* "Fits the entire image into the box" */
-        display: block; /* "Removes the padding around the image" */
-        margin: 0 auto; /* "Centers" */
-    }
-    .image-figure-intro figcaption {
-        align-items: start;
-        width: 100%;
-        word-wrap: break-word;
-    }
-    .grid-container-activity {
-        grid-template-columns: 1fr; /* "Single-column layout" */
-        gap: 2rem; /* "Spacing between boxes" */
-       
-    }
-
-    .grid-item-activity {
-        display: grid;
-        grid-template-columns: 1fr ;
-        align-items: center; /* "Centers the content" */
-        text-align: start; /* "Centers the text" */
-        
-        
-    }
-
-    .grid-item-activity figure {
-        display: flex;
-        flex-direction: column; /*"Stack the image and the description on top of each other" */
-        align-items: center; /* "Center the image and the description horizontally" */
-        justify-content: center; /* "Center the image and the description vertically" */
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .grid-item-activity img {
-        width: 100%; /* "Fit the image into the box" */
-        height: auto; /* "Maintain the aspect ratio" */
-        object-fit: contain; /* "Display the entire image" */
-    }
-
-    .grid-item-activity figcaption {
-        margin-top: 0.5rem; /* "Add spacing between the image and the caption" */
-        font-size: 1rem; /* "Reduce the caption font size on small screens" */
-        color: #555; /* "Set the caption color" */
-    }
-
-    .accesibility-testing {
-        grid-template-columns: 1fr; /* "Switch to a single column" */
-        gap: 1rem; /* "Reduce the spacing between the boxes" */
-        margin: 1rem; /* "Reduce the outer margin" */
-    }
-
-/*---------------activity page Tablet codes are finished here-------------*/
-
-    /*----------GitHub mobil css---------------*/
-
-    
-    .GitHubPageTextContent {
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .GitHubPageTextContent h3 {
-        font-size: 1.3rem;
-    }
-
-    .GitHubPageTextContent p {
+        padding: 0.2rem 0.2rem;
+        color: white;
+        margin-right: 0.1rem;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #2b6fb7;
         font-size: 0.9rem;
     }
 
+    /*GitHub page-CSS for mobile*/
     .GitHubPageImages {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Display one image per row */
     }
-     /*-----------Accessibility page mobil css ------------*/
-     
-    .accesibility-page h1{
-        font-size: 2rem;
-    }
-    .accesibility-page p{
-        font-size: 1.5rem;
-    }
-    .accesibility-testing{
-    grid-template-columns: 1fr;/*columns reduced to one for better readibility*/
 
+    .GitHubPageTextContent {
+        font-size: 0.9rem; /* Reduce text size for smaller screens */
+        padding: 1rem; /* Adjust padding */
     }
-    .accesibility-testing article h2 {
-        font-size: 1.2rem;
+
+    .GitHubPageimage {
+        border-radius: 0.5rem; /* Reduce border radius for smaller images */
     }
-   
+
 }
+    /*###################################################################*/
+    /*CSS SETTINGS FOR TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+    @media (min-width:480px) and (max-width: 768px) {
+
+        /*HOMEPAGE-CSS*/
+        /*Header h1*/
+        .page-header1 {
+            font-size: 1.8rem;
+        }
+
+        /*Header h2*/
+        .page-header2 {
+            font-size: 1.5rem;
+
+        }
+
+        .video {
+            width: 100%;
+            /* Full width of its container */
+            height: 20rem;
+            margin-top: 0rem;
+        }
+
+        .search-box {
+            justify-self: left;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
 
+        /* "Grid layout adjustment on mobile" */
+        .grid-container-home {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "side-menu"
+                "main-content"
+                "accordion";
+        }
 
-/* "Switch to a single column on large scales and small screens" */
-@media (max-width: 1024px), (min-resolution: 192dpi) {
+        .side-menu {
+            grid-area: side-menu;
+            display: flex;
+            flex-direction: column;
+            /* "To align menu items horizontally" */
+            justify-content: flex-start;
+            /* "To align the items by centering them" */
+            gap: 0.1rem;
+            /* "Spacing between menu items" */
+            background-color: #ddd;
+            /* "Background color for visual distinction" */
+            z-index: 5;
+            padding: 0.1rem;
+            /* "Narrower padding for the horizontal menu" */
+        }
 
 
-    .grid-container-activity {
-        grid-template-columns: 1fr; /* "Single-column layout on large screens" */
-        gap: 2rem; /* "Spacing between boxes" */
+        .main-content-home {
+            position: relative;
+            /* "Provides a reference for the info-panel" */
+            z-index: 1;
+            /* "Remains below the panel" */
+        }
+
+
+        /* "Info-panels in mobile view" */
+        .info-panel {
+            position: absolute;
+            /* "Positioned relative to the parent element" */
+            top: 0;
+            /* "Aligned from the top relative to the side-link" */
+            left: 0;
+            /* "Aligned from the left relative to the side-link" */
+            z-index: 10;
+            /* "A high value is assigned for it to appear on top" */
+            width: 100%;
+            /* "Full width on mobile" */
+            max-width: none;
+            /* "The width limit is removed" */
+            visibility: hidden;
+            /* "Hidden by default" */
+            max-height: 0;
+            /* "The height is zero when closed" */
+            transition: all 0.5s ease-out;
+            /* "Smooth transition" */
+            margin: 0;
+            /* "The spacing between panels is removed" */
+            overflow: hidden;
+            /* Content overflow is prevented */
+            background-color: #f8f8f8;
+            /* The background of the panel */
+            padding: 1rem;
+            /* Padding for the panel content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            /* Clarity with shading */
+        }
+
+        /* When the panel appearance is triggered */
+        .panel-toggle:checked+.info-panel {
+            visibility: visible;
+            max-height: 300px;
+            /* Maximum height when open */
+            overflow: auto;
+            /* Long content becomes scrollable */
+        }
+
+        /* Mobile side-link layout */
+        .side-link {
+            position: relative;
+            /* Reference for positioning the info-panel */
+            font-size: 1rem;
+            z-index: 5;
+            /* The side-link is positioned behind the panel. */
+            padding: 0.2rem;
+            margin-bottom: 0.15rem;
+        }
+
+
+        /* Close button layout */
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.2rem;
+            color: #000;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /*Studie table radio buttons*/
+        .label-matematik,
+        .label-statistik,
+        .label-vitenskapelige {
+            padding: 0.2rem 0.2rem;
+            color: white;
+            margin-right: 0.1rem;
+            border-radius: 0.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #2b6fb7;
+            font-size: 0.9rem;
+        }
+
+        /*In the activity page, the grid item activity is set to a single column.*/
+        .grid-container-activity {
+            grid-template-columns: 1fr;
+            /* Switch to a single column. */
+            gap: 2rem;
+            /* The space between the boxes. */
+        }
+
+        .grid-item-activity {
+            display: flex;
+            flex-direction: column;
+            /* Align the content vertically. */
+            align-items: center;
+            /* Center the content. */
+            text-align: center;
+            /*Center the text. */
+        }
+
+        .grid-item-activity figure {
+            width: 100%;
+            /* Image container width */
+            margin-bottom: 1rem;
+            /* The space between the text and the image. */
+        }
+
+        .grid-item-activity img {
+            width: 90%;
+            /* Make the image smaller and center it. */
+            height: auto;
+            /* Resize while keeping the aspect ratio. */
+        }
+
+        .grid-item-activity article {
+            width: 100%;
+            /* Adjust the article width. */
+        }
+
+
+        /*-------------------Activity page tablet codes------------------*/
+        h1.introduksjontittel {
+            font-size: 1.8rem;
+            /* Smaller size for small screens */
+            text-align: center;
+            /* Center the text */
+            line-height: 1.4;
+            /* Add space between lines */
+        }
+
+        .image-container {
+            grid-template-columns: 1fr;
+
+        }
+
+        .image-figure-intro img {
+            width: 100%;
+            /* "The image fits the box at full width" */
+            height: auto;
+            /* "The height is adjusted while maintaining its aspect ratio" */
+            object-fit: contain;
+            /* "Fits the entire image into the box" */
+            display: block;
+            /* "Removes the padding around the image" */
+            margin: 0 auto;
+            /* "Centers" */
+        }
+
+        .image-figure-intro figcaption {
+            align-items: start;
+            width: 100%;
+            word-wrap: break-word;
+        }
+
+        .grid-container-activity {
+            grid-template-columns: 1fr;
+            /* "Single-column layout" */
+            gap: 2rem;
+            /* "Spacing between boxes" */
+
+        }
+
+        .grid-item-activity {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            /* "Centers the content" */
+            text-align: start;
+            /* "Centers the text" */
+
+
+        }
+
+        .grid-item-activity figure {
+            display: flex;
+            flex-direction: column;
+            /*"Stack the image and the description on top of each other" */
+            align-items: center;
+            /* "Center the image and the description horizontally" */
+            justify-content: center;
+            /* "Center the image and the description vertically" */
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .grid-item-activity img {
+            width: 100%;
+            /* "Fit the image into the box" */
+            height: auto;
+            /* "Maintain the aspect ratio" */
+            object-fit: contain;
+            /* "Display the entire image" */
+        }
+
+        .grid-item-activity figcaption {
+            margin-top: 0.5rem;
+            /* "Add spacing between the image and the caption" */
+            font-size: 1rem;
+            /* "Reduce the caption font size on small screens" */
+            color: #555;
+            /* "Set the caption color" */
+        }
+
+        .accesibility-testing {
+            grid-template-columns: 1fr;
+            /* "Switch to a single column" */
+            gap: 1rem;
+            /* "Reduce the spacing between the boxes" */
+            margin: 1rem;
+            /* "Reduce the outer margin" */
+        }
+
+        /*---------------activity page Tablet codes are finished here-------------*/
+
+        /*----------GitHub mobil css---------------*/
+
+
+        .GitHubPageImages {
+            grid-template-columns: repeat(2, 1fr); /* Display two images per row */
+            gap: 0.5rem; /* Reduce gap between images */
+        }
+    
+        .GitHubPageTextContent {
+            font-size: 1rem; /* Keep a slightly larger font size for better readability */
+        }
+
+
+        /*-----------Accessibility page mobil css ------------*/
+
+        .accesibility-page h1 {
+            font-size: 2rem;
+        }
+
+        .accesibility-page p {
+            font-size: 1.5rem;
+        }
+
+        .accesibility-testing {
+            grid-template-columns: 1fr;
+            /*columns reduced to one for better readibility*/
+
+        }
+
+        .accesibility-testing article h2 {
+            font-size: 1.2rem;
+        }
+
     }
 
-    .grid-item-activity {
-        display: flex;
-      flex-direction: column;
-        align-items: center; /* "Center" */
-        text-align: start; /* "Center the text" */
+
+
+    /* "Switch to a single column on large scales and small screens" */
+    @media (max-width: 1024px),
+    (min-resolution: 192dpi) {
+
+
+        .grid-container-activity {
+            grid-template-columns: 1fr;
+            /* "Single-column layout on large screens" */
+            gap: 2rem;
+            /* "Spacing between boxes" */
+        }
+
+        .grid-item-activity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* "Center" */
+            text-align: start;
+            /* "Center the text" */
+        }
+
+        .grid-item-activity img {
+            width: 100%;
+            /* "Full image width" */
+            height: auto;
+            /* "Height proportional" */
+            margin-bottom: 1rem;
+            /* "Add spacing below the image" */
+        }
+        
+        .GitHubPageImages {
+            grid-template-columns: 1fr; /* Show only one image per row */
+        }
+    
+        .GitHubPageimage {
+            width: 100%; /* Ensure images stretch to fit the container */
+        }
+    
+        .GitHubPageTextContent {
+            padding: 1rem; /* Adjust content padding */
+        }
     }
 
-    .grid-item-activity img {
-        width: 100%; /* "Full image width" */
-        height: auto; /* "Height proportional" */
-        margin-bottom: 1rem; /* "Add spacing below the image" */
-    }
-}
 
 
-
-/* For (21:9)*/
-@media (min-aspect-ratio: 21/9) and (min-width: 2560px) {
+    /* For (21:9)*/
+    @media (min-aspect-ratio: 21/9) and (min-width: 2560px) {
 
         /*video preview*/
-    .video{
-        width: 100%; /* Full width of its container */
-        height: 42rem;
-        margin-top: -2rem;
-    }
+        .video {
+            width: 100%;/* Full width of its container */
+            height: 42rem;
+            margin-top: -2rem;
+        }
 
-}
-}
+        .GitHubPageMain {
+            max-width: 1440px; /* Center and limit the width of the main content */
+            margin: 0 auto; /* Center content on wide screens */
+        }
+    
+        .GitHubPageImages {
+            grid-template-columns: repeat(4, 1fr); /* Display four images per row */
+            gap: 2rem; /* Add more space between images */
+        }
+    
+        .GitHubPageTextContent {
+            font-size: 1.2rem; /* Increase text size for better visibility on large screens */
+            padding: 2rem; /* Increase padding for better spacing */
+        }
+
+    }
