@@ -197,6 +197,7 @@ Inspired by the following tutorial:
     width: 100%;
 }
 
+
 /*Homepage title*/
 .page-header {
     justify-content: center;
@@ -262,14 +263,12 @@ Inspired by the following tutorial:
 .side-menu {
     grid-area: side-menu;
     background-color: #f4f4f4;
-    /* Light gray background for the menu */
     display: flex;
-    flex-direction: column;
-    /* Align items vertically */
-    align-items: flex-start;
-    /* Aligns items to the start of the container */
+    flex-direction: column;/* Align items vertically */
+    align-items: flex-start;/* Aligns items to the start of the container */
     padding: 0.625rem;
-    /* Padding equivalent to 10px */
+    max-width: 100%;
+
 }
 
 /* 
@@ -283,19 +282,17 @@ Inspired by the following resources:
 
 /* Side menu links */
 .side-link {
-    width: 100%;
-    /* Full width of the menu */
+    width: 100%;/* Full width of the menu */
     padding: 0.6rem;
     margin-bottom: 0.3rem;
     background-color: #007acd;
     color: white;
     border: none;
-    cursor: pointer;
-    /* Adds pointer cursor for interactivity */
+    cursor: pointer;/* Adds pointer cursor for interactivity */
     text-align: left;
-    font-size: 1.2rem;
-    /* Larger font size for readability */
+    font-size: 1.2rem;/* Larger font size for readability */
     border-radius: 0.3rem;
+    max-width: 100%;
 }
 
 /* Hover effect to improve link visibility */
@@ -334,6 +331,7 @@ Inspired by the following resources:
     display: block;
     visibility: visible;/* Makes the panel visible with click */
     max-height: none;
+    max-width: 95%;
 }
 
 input[type="radio"]:checked+label+.info-panel {
@@ -397,25 +395,14 @@ input[type="radio"]:checked+label+.info-panel {
 }
 
 .mat-studie {
-    /*display: flex;*/
-    align-items: canter;
+    display: flex;
+    align-items: center;
     margin: 0rem;
-    max-width: 400px;
+    max-width: 100%;
     padding: 0rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    width: 20rem;
+    width: 150vh;
     height: auto;
 }
-
-.mat-studie .image {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
 
 /* Table Styles for Study Programs at studiepro page*/
 
@@ -450,16 +437,14 @@ input[type="radio"]:checked+label+.info-panel {
 /*Studie table at studiepro page*/
 table {
     width: 100%;
-    border-collapse: collapse;
-    /* Collapses table borders */
+    border-collapse: collapse;/* Collapses table borders */
 }
 
 th,
 td {
     padding: 0.4rem 0.6rem;
     text-align: left;
-    border-bottom: 1px solid #2d3223;
-    /* Dark border below each row */
+    border-bottom: 1px solid #2d3223;/* Dark border below each row */
 }
 
 /*header of table*/
@@ -469,7 +454,6 @@ th {
     color: white;
     text-align: center;
     font-weight: bold;
-    /* Makes header text bold */
 }
 
 /* Study program tables are initially hidden */
@@ -1161,23 +1145,24 @@ https://www.w3schools.com/css/css3_images.asp
             top: 0; /* "Aligned from the top relative to the side-link" */
             left: 0; /* "Aligned from the left relative to the side-link" */
             z-index: 10; /* "A high value is assigned for it to appear on top" */
-            width: 100%; /* "Full width on mobile" */
-            max-width: none; /* "The width limit is removed" */
-            visibility: hidden; /* "Hidden by default" */
+            width: 95%; 
+            max-width: 95%; 
+            visibility: hidden; 
             max-height: 0; /* "The height is zero when closed" */
             transition: all 0.5s ease-out; /* "Smooth transition" */
-            margin: 0; /* "The spacing between panels is removed" */
+            margin: 0; 
             overflow: hidden; /* Content overflow is prevented */
-            background-color: #f8f8f8; /* The background of the panel */
-            padding: 1rem; /* Padding for the panel content */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
+            background-color: #f8f8f8; 
+            padding: 1rem; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /
         }
     
         /* When the panel appearance is triggered */
         .panel-toggle:checked + .info-panel {
             visibility: visible;
-            max-height: 300px; /* Maximum height when open */
+            max-height: 100%; /* Maximum height when open */
             overflow: auto; /* Long content becomes scrollable */
+            max-width: 95%;
         }
     
         /* Mobile side-link layout */
@@ -1187,6 +1172,7 @@ https://www.w3schools.com/css/css3_images.asp
             z-index: 5; /* The side-link is positioned behind the panel. */
             padding: 0.2rem;
             margin-bottom: 0.15rem;
+            max-width: 100%;
         }
     
     
