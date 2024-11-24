@@ -934,7 +934,6 @@ ul li a{
     width: 100%;
     text-align: center;
     /*aligns the items in the center*/
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
     border-radius: 0.25rem;
   
   }
@@ -1007,9 +1006,9 @@ ul li a{
 .accesibility-page {
     background-color: #ffffff;
     margin: 0 auto;
+    padding: 1rem;
     /*"To align in the center"*/
-    padding: 0 5%;
-    /* "Leaves a 5% margin on the left and right sides of the screen" */
+  
 }
 
 .accesibility-page h1 {
@@ -1035,20 +1034,18 @@ ul li a{
 }
 
 .accesibility-page-images{
+    width: 100%;
     display: grid; /* "Use flexbox to arrange side by side" */
     grid-template-columns: 1fr 1fr; 
-    padding: 3rem;
     gap: 4rem;
     /* "Spacing between images" */
-    justify-content: center;
-    /* "Centers the images" */
-    align-items: start;
-    /* "Aligns the top of the images" */
+   
+   
 }
 
 .accesibility-page-images figure {
     display: grid;
-    align-items: center;
+    align-items: left;
     /* Center-align the content */
     text-align: center;
     /* Center text within the figure */
@@ -1068,6 +1065,7 @@ ul li a{
     /* "To display the entire image" */
     border-radius: 8px;
     border: solid #000064;
+  
 
 }
 
@@ -1086,11 +1084,14 @@ ul li a{
     /* Subtle shadow for depth and emphasis */
     min-height: 400px;
     margin: 2rem;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* Three columns of equal width */
     gap: 30px;
     width: 90%;
+    padding-left: 3rem;
+    padding-right: -2rem;
     box-shadow: #000;
     box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1);
     /* added a bit shadow */
@@ -1388,25 +1389,66 @@ https://www.w3schools.com/css/css3_images.asp
     }
 
     /*activity mobil*/
+     
+    /*-------------------Activity page mobile codes------------------*/
+    h1.introduksjontittel {
+        font-size: 1.5em; /* Smaller size for small screens */
+        margin: 1rem;
+        
+    }
+    .aktivitetsoversikt h2{
+        font-size: 1.5rem;
+
+    }
+    .image-container {
+        grid-template-columns: 1fr;  
+     
+    
+    }
+    .image-figure-intro img{
+        padding-right: 5rem;
+        padding-left: -5rem;
+        align-items: center;
+        width: 150%;
+        justify-content: center;
+
+       
+    }
+    .aktivitetsoversikt p{
+        font-size:1rem;
+    }
+   
+    .image-figure-intro figcaption {
+       font-size: 0.7rem;
+      
+    
+    }
+    .grid-item-activity h3{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
        /*In the activity page, the grid item activity is set to a single column.*/
        .grid-container-activity {
         grid-template-columns: 1fr; /* Switch to a single column. */
         gap: 2rem; /* The space between the boxes. */
        
     }
-   .grid-item-activity{
-    line-height: 1rem;
-   }
-    
 
+    
     .grid-item-activity figure {
         width: 100%; /* Image container width */
         margin-bottom: 1rem; /* The space between the text and the image. */
+       
     }
     
     .grid-item-activity img {
-        width: 90%; /* Make the image smaller and center it. */
-        height: auto; /* Resize while keeping the aspect ratio. */
+        padding-right: 2rem;
+        margin-top: -4rem;
+       
+    }
+    .grid-item-activity figcaption{
+        margin-top: -1rem;
+        text-align: left;
     }
     
     .grid-item-activity article {
@@ -1434,33 +1476,12 @@ https://www.w3schools.com/css/css3_images.asp
             grid-template-columns: 1fr;
         }
         
-    
-    /*-------------------Activity page mobile codes------------------*/
-    h1.introduksjontittel {
-        font-size: 1.2rem; /* Smaller size for small screens */
-       margin: 1rem;
-    }
-    .image-container {
-        grid-template-columns: 1fr;  
-    
-      
-    }
-    .aktivitetsoversikt p{
-        font-size:1rem;
-    }
    
-    .image-figure-intro figcaption {
-       font-size: 0.7rem;
-    }
-    .grid-item-activity h3{
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
 
     
     
 
-/*---------------activity page Tablet codes are finished here-------------*/
+
 
        /*css for mobile accesibility page*/
        
