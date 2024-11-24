@@ -566,7 +566,7 @@ footer{
     bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: white;
-    padding: 10px 0;
+    padding: 0.6rem 0;
     font-size: 13px;
     line-height: 20px;
 }
@@ -585,14 +585,14 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2px;
+    padding: 0.12rem;
     flex: 1;
     max-width: 300px;
 }
 
 .column p {
     font-size: 1.2rem; /* "Increase the font size" */
-    line-height: 1.4; /* "Adjust the line spacing" */
+    line-height: 1.4rem; /* "Adjust the line spacing" */
 }
 .column p a{
     font-size: 1.3rem;;
@@ -601,49 +601,50 @@ footer{
 .column h3{
     color: white;
    font-size: x-large;
-   margin-top:5px ;
+   margin-top:0.3rem ;
    font-weight: bold;
   white-space: nowrap;
-   padding: 2rem;
+   padding: 2rem;/*makes space above the text*/
    margin-bottom: 0;
    
 }
+/*contact us section css*/
 .contact-link {
     display: block; /* "Move the link to a new line" */
     font-weight: bold;
     font-size: 1rem;
-    text-decoration: none;
     color: white;
-    margin-top: 60px; /* "Adds some spacing from the top" */
+    margin-top: 3rem; /* "Adds some spacing from the top" */
     text-decoration: underline;
 }
     .contact-link:hover{
-        text-decoration: underline;
+        text-decoration: underline;/*text is shown underline shinnier when mouse is on it as well*/
     }
+
+    /*footer side LINKS section*/
 ul li{
-    list-style: none;
+    list-style: none;/*it removes the bullet dots (listing dot) on the left side the links*/
     margin-bottom: 12px;
 }
 ul li a{
-    text-decoration:underline ;
+    text-decoration:underline ;/*text is underline to get attention*/
     color: white;
     
 }
-
-
+/*website adress and name section*/
 .column i{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     text-align: left;
     font-size: 2rem; /*to make the social media icons bigger*/
 }
 .column a{
     color: white;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     display: block;
     transition: transform 0.3s ease;
-    padding: 5px 10px;
+    padding: 0.3rem 0.6rem;
 }
 .column a:hover,
 .column a:focus{
@@ -654,9 +655,9 @@ ul li a{
 
 /* "2x2 grid settings for social media icons" */
 .social-media-grid {
-    padding: 4rem;
+    padding: 6rem;/*used for holding them aligned the icons in the middle*/
     display: grid;
-    gap: 10px;
+    gap: 0.6rem;/*leaves space between them*/
     text-align: center;
     width: 100%;
   
@@ -668,9 +669,9 @@ ul li a{
     transition: transform 0.3s ease;
     text-decoration: underline; /*underlines the names of the links*/
     display: flex;
-    align-items: center;
+    align-items: center;/*keeps the cons and the text aligned*/
     justify-content: center;
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 .social-media-grid a:hover {
@@ -678,11 +679,12 @@ ul li a{
 }
 
 .social-media-grid i {
-    margin-right: 8px;
+    margin-right: 0.5rem;
     font-size: 1.8rem; /* "Icon size" */
 }
 
 /* -------------------------"Footer codes end here. -------------------------------------------."*/
+
 
 
 /*---------------------------------Activity Page Design STARTS-----------------------------------*/
@@ -695,11 +697,11 @@ ul li a{
 .background-container {
      max-width: 1200%; /*  streches the width of the backgound container completely*/
      gap: 2rem;
-     padding: 20px; /*"Add padding between the content and the edges." */
+     padding: 1.25rem; /*"Add padding between the content and the edges." */
      background-color: #b3e5fc; /*makes background light blue color*/
-     border-radius: 10px; /* round the corners*/
+     border-radius: 0.6rem; /* round the corners*/
      box-sizing: border-box; /* used to prevent overflow*/
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* added a bit shadow */
+     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* added a bit shadow */
      margin: 2.5rem;
      
 }
@@ -728,7 +730,7 @@ ul li a{
     display: grid; /* used to make elements 2 column grid container */
     grid-template-columns: 1fr 1fr;/*kepp the images in the same grid container*/
     object-fit: contain;/*used to fit the images entirely in the container*/
-    gap: 20px; /* leaves space between images*/
+    gap: 1.25rem; /* leaves space between images*/
     justify-content: center; /* keeps the images (grid container) in the center */
 }
 
@@ -766,7 +768,7 @@ ul li a{
     gap:4.5rem;
     background-color: #ffffff;
     border: 1px solid #292727;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -790,7 +792,7 @@ ul li a{
     width: 100%;
     text-align: center;/*aligns the items in the center*/
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+    border-radius: 0.25rem;
   
   }
 
@@ -869,7 +871,7 @@ ul li a{
 
 .accesibility-page-images{
     display: grid; /* "Use flexbox to arrange side by side" */
-    grid-template-columns: 1fr 1fr; /*gereksiz olabilir bu kod geri don BAKKKKKKK*/
+    grid-template-columns: 1fr 1fr; 
     padding: 3rem;
     gap: 4rem; /* "Spacing between images" */
     justify-content: center; /* "Centers the images" */
@@ -910,7 +912,7 @@ ul li a{
         margin: 2rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
-        gap: 30px;
+        gap: 1.87rem;
         width: 90%;
         box-shadow: #000;
         box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1); /* added a bit shadow */
@@ -924,7 +926,7 @@ ul li a{
   .accesibility-testing article {
     background-color: #a1d6fa;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.3rem;
    
     
   }
@@ -935,8 +937,6 @@ ul li a{
   }
 /* -----------------accesibility design finished here-------------*/
 
-
-/*Github page*/
 
 
 
@@ -1012,7 +1012,7 @@ figcaption {
 }
 
 /*###################################################################*/
-/*css settings for TABLET OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
+/*css settings for mobile OF ALL THE PAGES. MAKE YOUR CHANGES HERE. */
 @media (max-width: 480px) {
 
     /*HOMEPAGE-CSS*/
@@ -1139,6 +1139,106 @@ figcaption {
     font-weight: bold;
     background-color: #2b6fb7;
     font-size: 0.9rem;
+    }
+
+    /*activity mobil*/
+    
+    /*-------------------Activity page tablet codes------------------*/
+    h1.introduksjontittel {
+        font-size: 1.8rem; /* Smaller size for small screens */
+        text-align: center; /* Center the text */
+        line-height: 1.4; /* Add space between lines */
+    }
+    .image-container {
+        grid-template-columns: 1fr;  
+      
+    }
+    .image-figure-intro img {
+        width: 100%; /* "The image fits the box at full width" */
+        height: auto; /* "The height is adjusted while maintaining its aspect ratio" */
+        object-fit: contain; /* "Fits the entire image into the box" */
+        display: block; /* "Removes the padding around the image" */
+        margin: 0 auto; /* "Centers" */
+    }
+    .image-figure-intro figcaption {
+        align-items: start;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    .grid-container-activity {
+        grid-template-columns: 1fr; /* "Single-column layout" */
+        gap: 2rem; /* "Spacing between boxes" */
+       
+    }
+
+    .grid-item-activity {
+        display: grid;
+        grid-template-columns: 1fr ;
+        align-items: center; /* "Centers the content" */
+        text-align: start; /* "Centers the text" */
+        
+        
+    }
+
+    .grid-item-activity figure {
+        display: flex;
+        flex-direction: column; /*"Stack the image and the description on top of each other" */
+        align-items: center; /* "Center the image and the description horizontally" */
+        justify-content: center; /* "Center the image and the description vertically" */
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .grid-item-activity img {
+        width: 100%; /* "Fit the image into the box" */
+        height: auto; /* "Maintain the aspect ratio" */
+        object-fit: contain; /* "Display the entire image" */
+    }
+
+    .grid-item-activity figcaption {
+        margin-top: 0.5rem; /* "Add spacing between the image and the caption" */
+        font-size: 1rem; /* "Reduce the caption font size on small screens" */
+        color: #555; /* "Set the caption color" */
+    }
+
+    .accesibility-testing {
+        grid-template-columns: 1fr; /* "Switch to a single column" */
+        gap: 1rem; /* "Reduce the spacing between the boxes" */
+        margin: 1rem; /* "Reduce the outer margin" */
+    }
+
+/*---------------activity page Tablet codes are finished here-------------*/
+
+       /*css for mobile accesibility page*/
+
+
+       .accesibility-page h1{
+        font-size: 1.5rem;
+
+    }
+    .accesibility-page-images{
+        grid-template-columns: 1fr;
+    }
+    .accesibility-testing{
+        grid-template-columns: 1fr;
+        width: 85%;/*blue textes is fittet to the mobile screen*/
+
+    }
+    .accesibility-testing article{
+        font-size: 1rem;
+    }
+
+
+    /*mobile settings footer*/
+    footer {
+        .column h3{
+            font-size: 1rem;
+        }
+        .column{
+            grid-template-columns: 1fr;
+        }
+    }
+
 
 
 
@@ -1150,8 +1250,12 @@ figcaption {
 
     .GitHubPageImages {
         gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
     }
+  
+    
 }
+
 
 
 /*###################################################################*/
@@ -1297,72 +1401,6 @@ figcaption {
 }
 
 
-    /*-------------------Activity page tablet codes------------------*/
-    h1.introduksjontittel {
-        font-size: 1.8rem; /* Smaller size for small screens */
-        text-align: center; /* Center the text */
-        line-height: 1.4; /* Add space between lines */
-    }
-    .image-container {
-        grid-template-columns: 1fr;  
-      
-    }
-    .image-figure-intro img {
-        width: 100%; /* "The image fits the box at full width" */
-        height: auto; /* "The height is adjusted while maintaining its aspect ratio" */
-        object-fit: contain; /* "Fits the entire image into the box" */
-        display: block; /* "Removes the padding around the image" */
-        margin: 0 auto; /* "Centers" */
-    }
-    .image-figure-intro figcaption {
-        align-items: start;
-        width: 100%;
-        word-wrap: break-word;
-    }
-    .grid-container-activity {
-        grid-template-columns: 1fr; /* "Single-column layout" */
-        gap: 2rem; /* "Spacing between boxes" */
-       
-    }
-
-    .grid-item-activity {
-        display: grid;
-        grid-template-columns: 1fr ;
-        align-items: center; /* "Centers the content" */
-        text-align: start; /* "Centers the text" */
-        
-        
-    }
-
-    .grid-item-activity figure {
-        display: flex;
-        flex-direction: column; /*"Stack the image and the description on top of each other" */
-        align-items: center; /* "Center the image and the description horizontally" */
-        justify-content: center; /* "Center the image and the description vertically" */
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .grid-item-activity img {
-        width: 100%; /* "Fit the image into the box" */
-        height: auto; /* "Maintain the aspect ratio" */
-        object-fit: contain; /* "Display the entire image" */
-    }
-
-    .grid-item-activity figcaption {
-        margin-top: 0.5rem; /* "Add spacing between the image and the caption" */
-        font-size: 1rem; /* "Reduce the caption font size on small screens" */
-        color: #555; /* "Set the caption color" */
-    }
-
-    .accesibility-testing {
-        grid-template-columns: 1fr; /* "Switch to a single column" */
-        gap: 1rem; /* "Reduce the spacing between the boxes" */
-        margin: 1rem; /* "Reduce the outer margin" */
-    }
-
-/*---------------activity page Tablet codes are finished here-------------*/
-
     /*----------GitHub mobil css---------------*/
 
     
@@ -1382,21 +1420,7 @@ figcaption {
     .GitHubPageImages {
         grid-template-columns: 1fr;
     }
-     /*-----------Accessibility page mobil css ------------*/
-     
-    .accesibility-page h1{
-        font-size: 2rem;
-    }
-    .accesibility-page p{
-        font-size: 1.5rem;
-    }
-    .accesibility-testing{
-    grid-template-columns: 1fr;/*columns reduced to one for better readibility*/
-
-    }
-    .accesibility-testing article h2 {
-        font-size: 1.2rem;
-    }
+    
    
 }
 
