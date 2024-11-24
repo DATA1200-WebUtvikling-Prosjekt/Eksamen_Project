@@ -6,6 +6,7 @@
 664-817: Activity page design
 826-913:Accesibility page design
 917-990: GitHub page design
+For responsive styles
 993-1133: @media max-width:480px- design for mobilephone
 1137-1382:@media min-width:480px max-width:768px-Design for Tablet
 1183-1407: @media max-width:1024px design for laptop
@@ -24,8 +25,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    /* Header, content, and footer layout */
-    grid-template-areas:
+    grid-template-areas:/* Header, content, and footer layout */
         "header"
         "content"
         "footer";
@@ -37,10 +37,8 @@ body {
 header {
     grid-area: header;
     display: grid;
-    align-items: center;
-    /* Vertically aligns the header content */
-    padding: 0 1rem;
-    /* Horizontal padding */
+    align-items: center; /* Vertically aligns the header content */
+    padding: 0 1rem;/* Horizontal padding */
     background-color: #000064;
     color: rgb(250, 250, 250);
 
@@ -57,41 +55,28 @@ header {
 /*Search Box*/
 /* Design inspired by https://youtu.be/AmdIfgxMqY8?si=7BBZOvS828VnkFan*/
 .search-box {
-    display: flex;
-    /* Aligns the items inside the search box in a horizontal layout */
-    cursor: pointer;
-    /* Changes the cursor to a pointer (hand icon) to indicate the item is clickable */
+    display: flex;/* Aligns the items inside the search box in a horizontal layout */
+    cursor: pointer;/* Changes the cursor to a pointer (hand icon) to indicate the item is clickable */
     align-items: center;
-    /* Vertically centers the items inside the search box */
-    margin-left: auto;
-    /* Pushes the search box to the right by using automatic left margin */
+    margin-left: auto;/* Pushes the search box to the right by using automatic left margin */
     margin-right: 2rem;
-    /* Adds spacing of 2rem from the right edge */
-    justify-self: right;
-    /* Aligns the search box to the right within its container */
-    padding: 0.3rem 0.9rem;
-    /* Adds inner spacing: 0.3rem vertically, 0.9rem horizontally */
+    justify-self: right;/* Aligns the search box to the right within its container */
+    padding: 0.3rem 0.9rem;/* Adds inner spacing: 0.3rem vertically, 0.9rem horizontally */
     border: 0.125rem solid #ddd;
-    /* Adds a solid border with a light gray color */
     border-radius: 1.8rem;
-    /* Rounds the corners of the search box */
-    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.3);
-    /* Adds a shadow for a subtle 3D effect */
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.3);/* Adds a shadow for a subtle 3D effect */
+    
 }
 
 /*Input space css*/
 .search-box:hover input {
-    width: 100%;
-    /* Expands the input field to full width when the search box is hovered */
+    width: 100%;/* Expands the input field to full width when the search box is hovered */
 }
 
 .search-box input {
     width: 0;
-    /* Initially sets the input field width to zero (hidden) */
     outline: none;
-    /* Removes the default focus outline around the input field */
     border: none;
-    /* Removes the border of the input field */
     font-weight: 500;
     /* Sets a medium font weight for the text inside the input */
     transition: 0.8s;
@@ -136,19 +121,16 @@ header {
 /* Navbar Menu Section*/
 .navbar {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    /* Logo, menu, and search box layout */
+    grid-template-columns: auto 1fr auto;/* Logo, menu, and search box layout */
     align-items: center;
-    /* Vertically aligns navbar content */
 }
 
 /* Menu Styling */
 .menu {
     display: flex;
-    gap: 1rem;
-    /* Spacing between menu items */
-    justify-self: end;
-    /* Aligns the menu to the right */
+    gap: 1rem;/* Spacing between menu items */
+    justify-self: end;/* Aligns the menu to the right */
+    
 }
 
 /* Horizontal Menu Styles for Large Screens */
@@ -156,23 +138,18 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
-    list-style: none;
-    /* Removes bullet points */
-
+    list-style: none;/* Removes bullet points */
 }
 
 /* Menu Links Formatting*/
 .menu a {
     color: white;
-    text-decoration: none;
-    /* Removes underline when not on*/
+    text-decoration: none;/* Removes underline when not on*/
     font-size: 1.3rem;
-    padding: 0.5rem 0.8rem;
-    /* Padding around the link */
+    padding: 0.5rem 0.8rem;/* Padding around the link */
     background-color: #000064;
     font-weight: bold;
-    position: relative;
-    /* Enables additional styling, like hover effects */
+    position: relative;/* Enables additional styling, like hover effects */  
 }
 
 /*menu active style. User understand that which page is open*/
@@ -193,33 +170,31 @@ Inspired by the following tutorial:
 
 /* Main Content Layout */
 .grid-container-home {
-    grid-area: content;
-    /* Assigns this grid container to the content area */
+    grid-area: content;/* Assigns this grid container to the content area */
     display: grid;
-    grid-template-columns: 18% 82%;
-    /* Defines the side menu and main content width */
+    grid-template-columns: 18% 82%;/* Defines the side menu and main content width */
     grid-template-rows: auto auto;
-    /* new row for the accordion */
-    grid-template-areas:
+    grid-template-areas:/* new row for the accordion */
         "side-menu main-content"
-        "accordion accordion";
-    /* accordion takes full width at the second row */
+        "accordion accordion";/* accordion takes full width at the second row */
     gap: 0.6rem;
     padding: 1.2rem;
-    height: auto;
-    /* Sets the height based on viewport with a specific offset */
+    height: auto;/* Sets the height based on viewport with a specific offset */
+    max-width: 100%;
+    width: 100%;
 }
 
 /* The home page main-content */
 .main-content-home {
     grid-area: main-content;
-    grid-column: 2;
+    grid-column: 2; /*main-content-home has two column that are side-menu and main content*/
     grid-row: 1;
     background-color: #e9e9e9;
     padding: 1.2rem;
     font-size: 1.1rem;
     position: relative;
-
+    max-width: 100%;
+    width: 100%;
 }
 
 /*Homepage title*/
@@ -249,10 +224,12 @@ Inspired by the following tutorial:
     /* Full width of its container */
     height: 32rem;
     margin-top: 0;
+    max-width: 100%;
 }
 
 .video-preview {
     width: 100%;
+    max-width: 100%;
     display: block;
     margin-bottom: 1rem;
     /* Space below the image */
@@ -262,6 +239,7 @@ Inspired by the following tutorial:
 
 .video-preview img {
     max-width: 100%;
+    width: 100%;
     /* Scale down on smaller screens */
     height: auto;
     /* Maintain aspect ratio */
@@ -273,13 +251,11 @@ Inspired by the following tutorial:
 /* Hamburger Menu and Side Menu (Mobile Screens) */
 /* Hidden checkbox for controlling the hamburger menu */
 .kontrol {
-    display: none;
-    /* Hidden on larger screens */
+    display: none;/* Hidden on larger screens */
 }
 
 #kontrol {
-    display: none;
-    /* Hides the checkbox itself */
+    display: none;/* Hides the checkbox itself */
 }
 
 /* Side Menu on the Home Page */
@@ -335,45 +311,33 @@ Inspired by the following resources:
 
 /* Info Panel (content displayed when side-link is clicked) */
 .info-panel {
-    display: none;
-    /* Hidden by default */
+    display: none;/* Hidden by default before open */
     background-color: #f8f8f8;
     padding: 1rem;
     border: 1px solid #ddd;
-    /* Light gray border for separation */
     margin-top: 1rem;
     border-radius: 0.3rem;
-    position: absolute;
-    /* Positioned relative to the parent */
-    top: 0;
-    /* Aligns panel to the top */
-    left: 0;
-    /* Aligns panel to the left */
+    position: absolute;/* Positioned relative to the parent */
+    top: 0;/* Aligns panel to the top */
+    left: 0; /* Aligns panel to the left */
     width: 100%;
     max-width: 100%;
     text-align: left;
-    visibility: hidden;
-    /* Initially invisible */
-    overflow: hidden;
-    /* Hides content outside the container */
-    word-wrap: break-word;
-    /* Breaks long text into multiple lines */
-    transition: max-height 0.5s ease-out;
-    /* Smooth transition when opening/closing */
+    visibility: hidden;/* Initially invisible */
+    overflow: hidden; /* Hides content outside the container */
+    word-wrap: break-word;/* Breaks long text into multiple lines */
+    transition: max-height 0.5s ease-out;/* Smooth transition when opening/closing */
 }
 
 /* Displays the info panel when the corresponding radio button is checked */
 .panel-toggle:checked+.info-panel {
     display: block;
-    visibility: visible;
-    /* Makes the panel visible */
+    visibility: visible;/* Makes the panel visible with click */
     max-height: none;
-    /* Removes height restriction when opened */
 }
 
 input[type="radio"]:checked+label+.info-panel {
-    display: block;
-    /* Displays the panel when it is checked */
+    display: block;/* Displays the panel when it is checked */
 }
 
 /* Close button for the info panel */
@@ -390,16 +354,14 @@ input[type="radio"]:checked+label+.info-panel {
 
 /* Link styling */
 .samordlink {
-    color: blue;
-    /* Blue to indicate a clickable link */
+    color: blue; /* Blue to indicate a clickable link */
 }
 
 .samordlink:visited {
-    color: purple;
-    /* Changes color after the link is visited */
-    text-decoration-color: rgb(78, 13, 110);
-    /* Changes underline color to purple */
+    color: purple;/* Changes color after the link is visited */
+    text-decoration-color: rgb(78, 13, 110); /* Changes underline color to purple */
 }
+    
 
 /* Button design for ACIT page redirection */
 .acit-btn {
@@ -419,9 +381,7 @@ input[type="radio"]:checked+label+.info-panel {
 
 /* Styling for each information block */
 .shortinfo {
-    /*padding: 0.2rem 0;  Adds spacing top and bottom */
     border-bottom: 1px solid #00093c;
-    /* Adds a bottom border with a dark blue color */
 }
 
 /* Remove the bottom border for the last information block */
@@ -433,13 +393,12 @@ input[type="radio"]:checked+label+.info-panel {
 /* Style for informational text */
 .shortinfo p {
     margin: 0.1rem 0 0;
-    /* Adds a small top margin below the title */
     color: #555;
 }
 
 .mat-studie {
     /*display: flex;*/
-    align-items: left;
+    align-items: canter;
     margin: 0rem;
     max-width: 400px;
     padding: 0rem;
