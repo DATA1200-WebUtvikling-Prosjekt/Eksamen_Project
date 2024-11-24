@@ -1016,6 +1016,68 @@ figcaption {
 @media (max-width: 480px) {
 
     /*HOMEPAGE-CSS*/
+    
+        /* "Info-panels in mobile view" */
+        .info-panel {
+            position: absolute; /* "Positioned relative to the parent element" */
+            top: 0; /* "Aligned from the top relative to the side-link" */
+            left: 0; /* "Aligned from the left relative to the side-link" */
+            z-index: 10; /* "A high value is assigned for it to appear on top" */
+            width: 100%; /* "Full width on mobile" */
+            max-width: none; /* "The width limit is removed" */
+            visibility: hidden; /* "Hidden by default" */
+            max-height: 0; /* "The height is zero when closed" */
+            transition: all 0.5s ease-out; /* "Smooth transition" */
+            margin: 0; /* "The spacing between panels is removed" */
+            overflow: hidden; /* Content overflow is prevented */
+            background-color: #f8f8f8; /* The background of the panel */
+            padding: 1rem; /* Padding for the panel content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
+        }
+    
+        /* When the panel appearance is triggered */
+        .panel-toggle:checked + .info-panel {
+            visibility: visible;
+            max-height: 300px; /* Maximum height when open */
+            overflow: auto; /* Long content becomes scrollable */
+        }
+    
+        /* Mobile side-link layout */
+        .side-link {
+            position: relative; /* Reference for positioning the info-panel */
+            font-size: 1rem;
+            z-index: 5; /* The side-link is positioned behind the panel. */
+            padding: 0.2rem;
+            margin-bottom: 0.15rem;
+        }
+    
+    
+        /* Close button layout */
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.2rem;
+            color: #000;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    
+        /*Studie table radio buttons*/
+        .label-matematik,
+        .label-statistik,
+        .label-vitenskapelige {
+        padding: 0.2rem 0.2rem;
+        color: white;
+        margin-right: 0.1rem;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #2b6fb7;
+        font-size: 0.9rem;
+    }
+ 
 
     .search-box {
         justify-self: left;
@@ -1142,90 +1204,119 @@ figcaption {
     }
 
     /*activity mobil*/
+       /*In the activity page, the grid item activity is set to a single column.*/
+       .grid-container-activity {
+        grid-template-columns: 1fr; /* Switch to a single column. */
+        gap: 2rem; /* The space between the boxes. */
+       
+    }
+   .grid-item-activity{
+    line-height: 1rem;
+   }
     
-    /*-------------------Activity page tablet codes------------------*/
+
+    .grid-item-activity figure {
+        width: 100%; /* Image container width */
+        margin-bottom: 1rem; /* The space between the text and the image. */
+    }
+    
+    .grid-item-activity img {
+        width: 90%; /* Make the image smaller and center it. */
+        height: auto; /* Resize while keeping the aspect ratio. */
+    }
+    
+    .grid-item-activity article {
+        width: 100%; /* Adjust the article width. */
+    }
+    
+    
+        /*----------GitHub mobil css---------------*/
+    
+        
+        .GitHubPageTextContent {
+            text-align: center;
+            padding: 1rem;
+        }
+    
+        .GitHubPageTextContent h3 {
+            font-size: 1.3rem;
+        }
+    
+        .GitHubPageTextContent p {
+            font-size: 0.9rem;
+        }
+    
+        .GitHubPageImages {
+            grid-template-columns: 1fr;
+        }
+        
+    
+    /*-------------------Activity page mobile codes------------------*/
     h1.introduksjontittel {
-        font-size: 1.8rem; /* Smaller size for small screens */
-        text-align: center; /* Center the text */
-        line-height: 1.4; /* Add space between lines */
+        font-size: 1.2rem; /* Smaller size for small screens */
+       margin: 1rem;
     }
     .image-container {
         grid-template-columns: 1fr;  
+    
       
     }
-    .image-figure-intro img {
-        width: 100%; /* "The image fits the box at full width" */
-        height: auto; /* "The height is adjusted while maintaining its aspect ratio" */
-        object-fit: contain; /* "Fits the entire image into the box" */
-        display: block; /* "Removes the padding around the image" */
-        margin: 0 auto; /* "Centers" */
+    .aktivitetsoversikt p{
+        font-size:1rem;
     }
+   
     .image-figure-intro figcaption {
-        align-items: start;
-        width: 100%;
-        word-wrap: break-word;
+       font-size: 0.7rem;
     }
-    .grid-container-activity {
-        grid-template-columns: 1fr; /* "Single-column layout" */
-        gap: 2rem; /* "Spacing between boxes" */
-       
+    .grid-item-activity h3{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
     }
 
-    .grid-item-activity {
-        display: grid;
-        grid-template-columns: 1fr ;
-        align-items: center; /* "Centers the content" */
-        text-align: start; /* "Centers the text" */
-        
-        
-    }
-
-    .grid-item-activity figure {
-        display: flex;
-        flex-direction: column; /*"Stack the image and the description on top of each other" */
-        align-items: center; /* "Center the image and the description horizontally" */
-        justify-content: center; /* "Center the image and the description vertically" */
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .grid-item-activity img {
-        width: 100%; /* "Fit the image into the box" */
-        height: auto; /* "Maintain the aspect ratio" */
-        object-fit: contain; /* "Display the entire image" */
-    }
-
-    .grid-item-activity figcaption {
-        margin-top: 0.5rem; /* "Add spacing between the image and the caption" */
-        font-size: 1rem; /* "Reduce the caption font size on small screens" */
-        color: #555; /* "Set the caption color" */
-    }
-
-    .accesibility-testing {
-        grid-template-columns: 1fr; /* "Switch to a single column" */
-        gap: 1rem; /* "Reduce the spacing between the boxes" */
-        margin: 1rem; /* "Reduce the outer margin" */
-    }
+    
+    
 
 /*---------------activity page Tablet codes are finished here-------------*/
 
        /*css for mobile accesibility page*/
+       
 
 
        .accesibility-page h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
 
+    }
+    .accesibility-page p{
+        font-size:1.5rem;
+        padding-left: 0rem; /*gives space between the website frame and the text*/
+        padding-right:0; /*gives space between the website frame and the text*/
+    
+        line-height: 2rem;
+    
+        
+    
     }
     .accesibility-page-images{
         grid-template-columns: 1fr;
+       padding-left: 0rem;/*used for reducing space to get images and figcation in the center of the oage*/
+        
+    }
+    .accesibility-page-images{
+        width: 120%;
     }
     .accesibility-testing{
         grid-template-columns: 1fr;
-        width: 85%;/*blue textes is fittet to the mobile screen*/
+        width: 100%;/*blue textes is fittet to the mobile screen*/
+       margin-left: 0.3rem;
 
     }
     .accesibility-testing article{
         font-size: 1rem;
+       
+    }
+    .accesibility-testing p{
+        line-height: 2rem;
+       
     }
 
 
@@ -1251,6 +1342,7 @@ figcaption {
     .GitHubPageImages {
         gap: 1rem;
         grid-template-columns: repeat(1, 1fr);
+      
     }
   
     
@@ -1313,114 +1405,6 @@ figcaption {
     }
 
 
-        /* "Info-panels in mobile view" */
-    .info-panel {
-        position: absolute; /* "Positioned relative to the parent element" */
-        top: 0; /* "Aligned from the top relative to the side-link" */
-        left: 0; /* "Aligned from the left relative to the side-link" */
-        z-index: 10; /* "A high value is assigned for it to appear on top" */
-        width: 100%; /* "Full width on mobile" */
-        max-width: none; /* "The width limit is removed" */
-        visibility: hidden; /* "Hidden by default" */
-        max-height: 0; /* "The height is zero when closed" */
-        transition: all 0.5s ease-out; /* "Smooth transition" */
-        margin: 0; /* "The spacing between panels is removed" */
-        overflow: hidden; /* Content overflow is prevented */
-        background-color: #f8f8f8; /* The background of the panel */
-        padding: 1rem; /* Padding for the panel content */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Clarity with shading */
-    }
-
-    /* When the panel appearance is triggered */
-    .panel-toggle:checked + .info-panel {
-        visibility: visible;
-        max-height: 300px; /* Maximum height when open */
-        overflow: auto; /* Long content becomes scrollable */
-    }
-
-    /* Mobile side-link layout */
-    .side-link {
-        position: relative; /* Reference for positioning the info-panel */
-        font-size: 1rem;
-        z-index: 5; /* The side-link is positioned behind the panel. */
-        padding: 0.2rem;
-        margin-bottom: 0.15rem;
-    }
-
-
-    /* Close button layout */
-    .close-btn {
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        font-size: 1.2rem;
-        color: #000;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    /*Studie table radio buttons*/
-    .label-matematik,
-    .label-statistik,
-    .label-vitenskapelige {
-    padding: 0.2rem 0.2rem;
-    color: white;
-    margin-right: 0.1rem;
-    border-radius: 0.1rem;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #2b6fb7;
-    font-size: 0.9rem;
-}
-/*In the activity page, the grid item activity is set to a single column.*/
-.grid-container-activity {
-    grid-template-columns: 1fr; /* Switch to a single column. */
-    gap: 2rem; /* The space between the boxes. */
-}
-
-.grid-item-activity {
-    display: flex;
-    flex-direction: column; /* Align the content vertically. */
-    align-items: center; /* Center the content. */
-    text-align: center; /*Center the text. */
-}
-
-.grid-item-activity figure {
-    width: 100%; /* Image container width */
-    margin-bottom: 1rem; /* The space between the text and the image. */
-}
-
-.grid-item-activity img {
-    width: 90%; /* Make the image smaller and center it. */
-    height: auto; /* Resize while keeping the aspect ratio. */
-}
-
-.grid-item-activity article {
-    width: 100%; /* Adjust the article width. */
-}
-
-
-    /*----------GitHub mobil css---------------*/
-
-    
-    .GitHubPageTextContent {
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .GitHubPageTextContent h3 {
-        font-size: 1.3rem;
-    }
-
-    .GitHubPageTextContent p {
-        font-size: 0.9rem;
-    }
-
-    .GitHubPageImages {
-        grid-template-columns: 1fr;
-    }
-    
    
 }
 
