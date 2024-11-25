@@ -686,8 +686,7 @@ ul li a{
     display: block;
     margin-bottom: 0.6rem;
     text-align: left;
-    font-size: 2rem;
-    /*to make the social media icons bigger*/
+    font-size: 2rem;  /*to make the social media icons bigger*/
 }
 
 .column a {
@@ -701,8 +700,7 @@ ul li a{
 
 .column a:hover,
 .column a:focus {
-    transform: scale(1.1);
-    /*"If it is desired to appear in a box shape, `outline: 2px solid white;` can be added."*/
+    transform: scale(1.1); /*"If it is desired to appear in a box shape, `outline: 2px solid white;` can be added."*/
     outline-offset: 4px;
 }
 
@@ -720,8 +718,7 @@ ul li a{
     color: white;
     font-size: 1.2rem;
     transition: transform 0.3s ease;
-    text-decoration: underline;
-    /*underlines the names of the links*/
+    text-decoration: underline;  /*underlines the names of the links*/
     display: flex;
     align-items: center;/*keeps the cons and the text aligned*/
     justify-content: center;
@@ -766,20 +763,16 @@ ul li a{
 /*the head title*/
 .introduksjontittel {
     padding-top: 1rem;
-    text-align: center;
-    /*keeps the text in the middle of the place*/
-    font-size: 2.5rem;
-    /*it fits better to the page with this font size*/
+    text-align: center; /*keeps the text in the middle of the place*/
+    font-size: 2.5rem; /*it fits better to the page with this font size*/
 
 }
 
 /*styling codes of the first section part. inroduction part*/
 .aktivitetsoversikt {
-    text-align: center;
-    /*keeps the title in the  center*/
+    text-align: center; /*keeps the title in the  center*/
     width: 100%;
-    line-height: 1.8;
-    /* used to increase the line spacing */
+    line-height: 1.8; /* used to increase the line spacing */
 
 }
 
@@ -801,49 +794,35 @@ ul li a{
 }
 
 .image-figure-intro img {
-    width: 100%;
-    /* the width of the images */
+    width: 100%; /* the width of the images */
 }
 
 .image-figure-intro figcaption {
-    font-size: 1.2rem;
-    /* resized to make it more readable */
-    color: #555;
-    /* color of the figcaption text */
-    text-align: center;
-    /*is alligned in the center under the images*/
+    font-size: 1.2rem /* resized to make it more readable */
+    color: #555; /* color of the figcaption text */
+    text-align: center; /*is alligned in the center under the images*/
 }
 
 .aktivitetsoversikt article {
-    text-align: justify;
-    /*used to align the text to both the left and the right margins*/
-    font-size: 1.5rem;
-    /*used this size to make it easier to read for the users*/
-    margin: 0 auto;
-    /*used to leave equal margins on the sides*/
-    max-width: 90%;
-    /*used to keep the content a bit smaller in the page and it fits better with this way*/
-    padding-bottom: 2rem;
-    /*make space between the text and the white grid*/
+    text-align: justify;/*used to align the text to both the left and the right margins*/
+    font-size: 1.5rem;/*used this size to make it easier to read for the users*/
+    margin: 0 auto;/*used to leave equal margins on the sides*/
+    max-width: 90%;/*used to keep the content a bit smaller in the page and it fits better with this way*/
+    padding-bottom: 2rem; /*make space between the text and the white grid*/
 }
 
 /*styling codes of the white grids*/
 .grid-container-activity {
-    display: grid;
-    /* used to make elements (text and the image) 2 column grid container */
-    gap: 3rem;
-    /* used to leave space between the grids */
-    margin: 0 auto;
-    /*centers the grids in the page*/
-    max-width: 90%;
-    /*adjusted the size of grids to 90% to make a good look and design. So,it will be placed inside the blue background nicely*/
+    display: grid; /* used to make elements (text and the image) 2 column grid container */
+    gap: 3rem; /* used to leave space between the grids */
+    margin: 0 auto; /*centers the grids in the page*/
+    max-width: 90%; /*adjusted the size of grids to 90% to make a good look and design. So,it will be placed inside the blue background nicely*/
 }
 
 /*styling of items inside the white grids*/
 .grid-item-activity {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* created to coloumn grids*/
+    grid-template-columns: 1fr 1fr;/* created to coloumn grids*/
     justify-content: center;
     align-items: center;
     gap: 4.5rem;
@@ -858,25 +837,21 @@ ul li a{
 .grid-item-activity article {
     margin-top: 3rem;
     margin-left: 2rem;
-    text-align: left;
-    /*keeps te text on the left side*/
+    text-align: left;/*keeps te text on the left side*/
     margin: 1rem;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    /* used to adjust the size of font */
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used to adjust the size of font */
 
 }
 
 .grid-item-activity p {
     display: grid;
     line-height: 1.8rem;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    /* used for adjusting the size of font */
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* used for adjusting the size of font */
 }
 
 .grid-item-activity img {
     width: 100%;
-    text-align: center;
-    /*aligns the items in the center*/
+    text-align: center; /*aligns the items in the center*/
     border-radius: 0.25rem;
   
   }
@@ -885,8 +860,7 @@ ul li a{
 .grid-item-activity h3 {
     color: #0805f0;
     line-height: 3rem;
-    font-size: clamp(1.5rem, 1.5vw, 1.2rem);
-    /* "Text size is limited" */
+    font-size: clamp(1.5rem, 1.5vw, 1.2rem);  /* "Text size is limited" */
 }
 
 .grid-item-activity figure {
@@ -902,8 +876,7 @@ ul li a{
     padding: 0.5rem;
     margin-bottom: 2rem;
     font-style: italic;
-    text-align: center;
-    /*"Centers the caption below the image"*/
+    text-align: center;/*"Centers the caption below the image"*/
 
 }
 
@@ -911,29 +884,23 @@ ul li a{
 /* it will be seen with these codes on the page*/
 .activity-knapp,
 .activity-link {
-    color: #007acd;
-    /* links will be this color */
-    text-decoration: underline;
-    /* text is underlined*/
-    font-weight: bold;
-    /*make it bold for more visibility*/
+    color: #007acd;/* links will be this color */
+    text-decoration: underline; /* text is underlined*/
+    font-weight: bold;/*make it bold for more visibility*/
 
 }
 
 /* Hover css of the links */
 .activity-knapp:hover,
 .activity-link:hover {
-    color: #0056b3;
-    /* "Darkens on hover" */
-    text-decoration: underline;
-    /* text is underlined for more visibility */
+    color: #0056b3;/* "Darkens on hover" */
+    text-decoration: underline;/* text is underlined for more visibility */
 }
 
 /* css for The links after thet clicked*/
 .activity-knapp:visited,
 .activity-link:visited {
-    color: #840db3;
-    /* when it is clicked, the color turns to purple*/
+    color: #840db3; /* when it is clicked, the color turns to purple*/
 
 }
 
@@ -949,28 +916,21 @@ ul li a{
 .accesibility-page {
     background-color: #ffffff;
     margin: 0 auto;
-    padding: 1rem;
-    /*"To align in the center"*/
+    padding: 1rem;/*"To align in the center"*/
   
 }
 
 .accesibility-page h1 {
-    text-align: center;
-    /*keeps the title in the center of the page*/
-    margin-top: 4rem;
-    /*to make a space betwen hesader and he title*/
+    text-align: center; /*keeps the title in the center of the page*/
+    margin-top: 4rem; /*to make a space betwen hesader and he title*/
     font-size: 3.5rem;
 }
 
 .accesibility-page p {
-    padding-left: 2rem;
-    /*gives space between the website frame and the text*/
-    padding-right: 2rem;
-    /*gives space between the website frame and the text*/
-    padding-bottom: 1rem;
-    /*used to make the space between paragraph and the images*/
-    line-height: 3rem;
-    /*used to leave spaces between the lines, to make it easier to read.*/
+    padding-left: 2rem; /*gives space between the website frame and the text*/
+    padding-right: 2rem; /*gives space between the website frame and the text*/
+    padding-bottom: 1rem;/*used to make the space between paragraph and the images*/
+    line-height: 3rem; /*used to leave spaces between the lines, to make it easier to read.*/
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
 
@@ -980,32 +940,25 @@ ul li a{
     width: 100%;
     display: grid; /* "Use flexbox to arrange side by side" */
     grid-template-columns: 1fr 1fr; 
-    gap: 4rem;
-    /* "Spacing between images" */
+    gap: 4rem; /* "Spacing between images" */
    
    
 }
 
 .accesibility-page-images figure {
     display: grid;
-    align-items: left;
-    /* Center-align the content */
-    text-align: center;
-    /* Center text within the figure */
+    align-items: left; /* Center-align the content */
+    text-align: center; /* Center text within the figure */
 
 }
 
 .accesibility-page-images img {
 
-    width: 100%;
-    /* "Expands according to the container" */
+    width: 100%; /* "Expands according to the container" */
     height: auto;
-    max-width: 100%;
-    /* "The image does not overflow the container" */
-    aspect-ratio: 16/9;
-    /* "Maintains the aspect ratio" */
-    object-fit: contain;
-    /* "To display the entire image" */
+    max-width: 100%; /* "The image does not overflow the container" */
+    aspect-ratio: 16/9;/* "Maintains the aspect ratio" */
+    object-fit: contain;/* "To display the entire image" */
     border-radius: 8px;
     border: solid #000064;
   
@@ -1014,33 +967,27 @@ ul li a{
 
 
 .accesibility-page-images figcaption {
-    font-size: 1rem;
-    /* "Caption font size" */
-    color: #555;
-    /* "Text color" */
+    font-size: 1rem; /* "Caption font size" */
+    color: #555;/* "Text color" */
     margin-top: 0;
     padding-top: 1rem
 }
 
 .accesibility-testing {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for depth and emphasis */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth and emphasis */
     min-height: 400px;
     margin: 2rem;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Three columns of equal width */
+    grid-template-columns: repeat(2, 1fr); /* Three columns of equal width */
     gap: 30px;
     width: 90%;
     padding-left: 3rem;
     padding-right: -2rem;
     box-shadow: #000;
-    box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1);
-    /* added a bit shadow */
-    /*  styles of the subtitles in the accesibility-testing section */
-}
+    box-shadow: 0 4px 8px rgba(128, 126, 126, 0.1);/* added a bit shadow */
 
+}
 
 
 /* styleling the articles inside the section */
@@ -1050,7 +997,6 @@ ul li a{
     padding: 0.5rem;
     border-radius: 0.3rem;
    
-    
   }
   .accesibility-testing article p{
     font-size: 1.1rem;
