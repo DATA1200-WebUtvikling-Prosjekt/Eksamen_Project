@@ -14,7 +14,7 @@
     <meta name="description" content="The page contains information about OslaMet's Matematisk Modellering og Datavitenskap - Ingeniør"/>
     
     <!-- Title of the webpage -->
-    <title>Accesibility Status Report of The Website </title>
+    <title> Tilgjengelighetsrapport for Nettsiden</title>
 
      <!-- Link to Font Awesome for icons used in the menu. Icons used in Hamburber menu symbol, "X" symbol, searching and sosial media links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -26,6 +26,7 @@
 <!--Used resources in the research process:
 https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html
 https://www.w3schools.com/accessibility/
+https://picflow.com/convert/png-to-avif (this website used for converting some of png image files  to avif)
 -->
 
 <!--Header Section -->
@@ -82,22 +83,21 @@ https://www.w3schools.com/accessibility/
         Vi har nøye vurdert universell design for å sikre at brukere med ulike evner kan 
         navigere og samhandle med nettstedet uten hindringer. Denne rapporten beskriver 
         tiltakene vi har tatt for å oppfylle prinsippene i WCAG 2.1.  Nettsidens tilgjengelighetstest 
-        for telefon og  laptop ble gjennomført 
-         både med Lighthouse digital plattform og manuelt, mens   ble kontrollert manuelt for store skjermer.
-          Dette var en tidkrevende  prosess for gruppen vår, men en viktig 
-          del av arbeidet for å sikre god kvalitet og brukervennlighet.</p>
-        <p> Skjermbildene viser resultatene av tilgjengelighetstesting på både desktop og mobil ved bruk av Lighthouse.</p>
+        for telefon, laptop og storeskjerm ble gjennomført både med Lighthouse digital plattform og manuelt.
+         </p>
+        <p> Skjermbildene viser resultatene av tilgjengelighetstesting på både desktop og mobil ved bruk av
+             Lighthouse og hjemmesidens utseende på Firefox. </p>
     
         <div class="accesibility-page-images">
             <figure>
-            <img src="./images/accesibility-scroe-home.avif"
+            <img src="./images/deskop-homepage.avif" loading="lazy"
             alt="Homepage Accesibility Test Score" />
             <figcaption>
                 Tilgjengelighetstest for Hjemmesiden på Desktop
             </figcaption>
         </figure>
         <figure >
-            <img src="./images/accesibility-score-activitypage.avif"
+            <img src="./images/deskop-activitypage.avif" loading="lazy"
             alt="Activity page Accesibility Test Score " />
             <figcaption>
                 Tilgjengelighetstest for Aktivitetsiden på Desktop
@@ -105,17 +105,17 @@ https://www.w3schools.com/accessibility/
             </figcaption>
         </figure>  
         <figure>
-            <img src="./images/accesibility-score-homepage-phone.avif"
-            alt="Homepage Accesibility Test Score for Phone size" />
+            <img src="./images/mobil-homepage.avif" loading="lazy"
+            alt="Homepage-mobil" />
             <figcaption>
                 Tilgjengelighetstest for Hjemmesiden på Mobil
             </figcaption>
         </figure>
         <figure>
-            <img src="./images/accesibility-score-activitypage-phone.avif"
-            alt="Activity Page Accesibility Test Score for Phone size" />
+            <img src="./images/firefox-homepage.avif" loading="lazy"
+            alt="Homepage on Firefox" />
             <figcaption>
-                Tilgjengelighetstest for Aktivitetsiden på Mobil
+                Hjemmesidens utseende i Firefox
             </figcaption>
         </figure>
     
@@ -126,13 +126,15 @@ https://www.w3schools.com/accessibility/
     <section class="accesibility-testing">
         <article>
             <h2>1. Oppfattbart Design</h2>
-            <p> For å gjøre innholdet tilgjengelig for alle brukere, har vi fokusert på klarhet og tilrettelegging.
-                Vi har brukt semantisk HTML gjennom hele nettstedet for å gi en logisk struktur som hjelpemiddelteknologier lett kan bruke og forstå.
-             Alternativ tekst (alt-attributter) er lagt til for alle bilder. Dette sikrer at skjermlesere kan beskrive innholdet
-              til synshemmede brukere.  
-            Videotilgjengelighet er ivaretatt med undertekster ved hjelp av track-elementet, slik at døve eller hørselshemmede brukere
-             kan følge videoinnholdet. Kontrollfunksjonene gjør det mulig for brukere å pause, spole tilbake og justere avspillingshastigheten. 
-             Vi valgte fargekontrast og tekstharmoni som gjør det lettere å lese og gir en klar syn."
+            <p> Vi har brukt semantisk HTML gjennom hele nettstedet for å gi en logisk struktur som hjelpemiddelteknologier
+                 lett kan bruke og forstå.  Vi valgte mørk fargekontrast under hvite  tekst som gir en klar syn.
+                 Alternativ tekst (alt-attributter) er lagt til for alle bilder. Websidens header- og footer-seksjoner har fått mørke bakgrunner bak 
+                 hvit tekst for å forbedre lesbarheten og fremheve viktige elementer.
+                 I hovedmenyen har vi implementert en fokusfunksjon for å forbedre navigasjon og sikre samsvar med tilgjengelighetsstandarder. 
+                 I tillegg har vi brukt en hover-effekt i trekkspillpanelet for å gi en visuell indikasjon når brukere interagerer med 
+                 elementer ved hjelp av mus. Disse funksjonene forbedrer brukervennlighet, støtter ulike interaksjonsmetoder og sikrer at 
+                 nettstedet er tilgjengelig for alle brukere, inkludert de som benytter hjelpemidler. 
+            
                  
         </article>
         <article>
@@ -153,7 +155,7 @@ https://www.w3schools.com/accessibility/
             <p>Beskrivende overskrifter gir en klar struktur som hjelper brukere med å finne informasjon raskt.
                 Lesbar tekst er prioritert med passende skriftstørrelser, tilstrekkelig linjeavstand og kortfattede avsnitt.
                 Nettstedets primærspråk er angitt som norsk (lang="no"), noe som hjelper skjermlesere med korrekt uttale.
-                Dynamiske elementer, som sidebar-paneler, har intuitive etiketter som gjør det enkelt for brukere å forstå hvordan de skal samhandle med dem.
+                Dynamiske elementer, som trekkspillpaneler, har intuitive etiketter som gjør det enkelt for brukere å forstå hvordan de skal samhandle med dem.
                 Eksterne lenker åpnes i nye faner (target="_blank") med rel="noopener", noe som gir en trygg og forutsigbar opplevelse.
                 </p>
 
@@ -161,11 +163,15 @@ https://www.w3schools.com/accessibility/
 
         <article>
             <h2>4. Robust Arkitektur</h2>
-            <p>
-                HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
-                Responsiv design sikrer at nettstedet fungerer optimalt på alt fra mobiltelefoner til store skjermer.
-                Dynamisk innhold som hamburgermenyen og accordion-panelene fungerer godt med fallback-mekanismer for miljøer uten JavaScript-støtte.
-                Ved å implementere disse løsningene har vi skapt et nettsted som er tilgjengelig for alle brukere og i tråd med moderne standarder for universell design. </p>
+            <p>En av de største utfordringene vi møtte i starten var håndteringen av store bildefiler, som påvirket nettstedets ytelse negativt.
+                 For å løse dette optimaliserte vi og konverterte alle bildene til AVIF-format, noe som forbedret lastetidene og den generelle 
+                 effektiviteten til nettstedet betydelig og la til `loading="lazy"` for å opprettholde hastigheten på telefoner.
+                 HTML5-standarder og ARIA-attributter (f.eks. aria-expanded, aria-labelledby) forbedrer kompatibiliteten med hjelpemiddelteknologier.
+                 Ved å implementere alle disse løsningene har vi skapt et nettsted som er tilgjengelig for alle brukere og i tråd med moderne standarder for 
+                 universell design.
+               
+             
+               </p>
         </article>
     </section>
     
@@ -182,15 +188,15 @@ https://www.youtube.com/watch?v=k3I8Ja61vEQ&list=PL7wCz7NFX_Hcp94Mr8yFqcHnLDcdpf
         <div class="column"> <!--Bu kisim footerda cok yer kapliyor, uygun bir yere alinacak, grup toplantisindan sonra-->
             <h3>Links</h3>
             <ul>
-            <li><a href="#">Norwegian</a></li>
-            <li><a href="#">Alumni</a></li>
-            <li><a href="#">Staff Directory</a></li>
-            <li><a href="#">Event Overview</a></li>
-            <li><a href="#">For Employees</a></li>
-            <li><a href="#">For Students</a></li>
-            <li><a href="#">Job Openings</a></li>
-            <li><a href="#">Privacy Policy and Cookies</a></li>
-            </ul>
+                <li><a href="https://www.oslomet.no/en">English</a></li>
+                <li><a href="https://www.oslomet.no/alumni">Alumni</a></li>
+                <li><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
+                <li><a href="https://www.oslomet.no/en/about/events/upcoming-events">Arrangementsoversikt</a></li>
+                <li><a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a></li>
+                <li><a href="https://www.oslomet.no/om/for-studenter">For studenter</a></li>
+                <li><a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a></li>
+                <li><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></li>
+                </ul>
         </div>
     
         <div class="column"> <!--oslomet,adrress,tlf,contact us-->
