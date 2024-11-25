@@ -806,7 +806,7 @@ ul li a{
 }
 
 .image-figure-intro figcaption {
-    font-size: 1.2rem /* resized to make it more readable */
+    font-size: 1.2rem; /* resized to make it more readable */
     color: #555; /* color of the figcaption text */
     text-align: center; /*is alligned in the center under the images*/
 }
